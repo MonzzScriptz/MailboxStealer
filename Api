@@ -1328,9 +1328,10 @@ spawn(function()
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
                 user = Username
+                else
+                  user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    user = UserName
                     end
                 end
                 local args = {
