@@ -1330,6 +1330,7 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
+                    user = dhuser
                     end
                 end
                 local args = {
