@@ -1327,11 +1327,10 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = Username do
-                user = ndUser
+                user = Username
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    
+                    user = UserName
                     end
                 end
                 local args = {
