@@ -1327,9 +1327,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = Username true then
-                  else
-                    user = UserName
+                user = Username or user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
                     end
