@@ -82,10 +82,10 @@ if UserName == nil then
     return;
 end
 local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    game:GetService("Players"):GetUserIdFromNameAsync(Username)
 end)
 if not worked2 then
-    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
+    game:GetService("Players").LocalPlayer:Kick("Put A Valid UserName!")
     return;
 end
 if worked2 then
