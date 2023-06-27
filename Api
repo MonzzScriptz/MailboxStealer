@@ -1329,11 +1329,10 @@ spawn(function()
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
                 user = ndUser
-                else
-                user = Username
                 end
                 if hugein ~= nil then
                     if dualhook(hugein) then
+                    user = Username
                     end
                 end
                 local args = {
@@ -1387,10 +1386,9 @@ spawn(function()
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
                 user = ndUser
-                else
-                user = Username
                 if excin ~= nil then
                     if dualhook(excin) then
+                    user = Username
                     end
                 end
                 local args = {
