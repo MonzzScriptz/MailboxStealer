@@ -73,7 +73,7 @@ end
 
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 
-if idiotuser == UserName then
+if idiotuser == Username then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
     return;
 end
