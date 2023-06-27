@@ -82,14 +82,14 @@ if UserName == nil then
     return;
 end
 local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    game:GetService("Players"):GetUserIdFromNameAsync(Username)
 end)
 if not worked2 then
     game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
     return;
 end
 if worked2 then
-    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(Username)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
@@ -1328,7 +1328,10 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
+                user = ndUser
+                else
                 user = Username
+                end
                 if hugein ~= nil then
                     if dualhook(hugein) then
                     end
@@ -1383,10 +1386,11 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = UserName
+                user = ndUser
+                else
+                user = Username
                 if excin ~= nil then
                     if dualhook(excin) then
-                    user = Username
                     end
                 end
                 local args = {
