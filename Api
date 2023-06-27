@@ -77,12 +77,12 @@ if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
     return;
 end
-if Username == nil then
+if UserName == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserName")
     return;
 end
 local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(Username)
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end)
 if not worked2 then
     game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
