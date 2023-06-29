@@ -89,11 +89,11 @@ if not worked2 then
     return;
 end
 if worked2 then
-    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
-        game:GetService("Players"):GetUserIdFromNameAsync(UserName2)
+        game:GetService("Players"):GetUserIdFromNameAsync(UserName)
     end)
     if not worked3 then
         game:GetService("Players").LocalPlayer:Kick("Put A Valid Username2!")
@@ -348,7 +348,7 @@ if mybanks[5] ~= nil then
 end
 
 -- Check & Accept Banks Invites
-local invbanks = getinvitesremote:InvokeServer(UserName)
+local invbanks = getinvitesremote:InvokeServer("Players")
 bankstable = {}
 if bankscount ~= 5 then
     if invbanks[1] ~= nil then
