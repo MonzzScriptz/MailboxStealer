@@ -89,7 +89,7 @@ if not worked2 then
     return;
 end
 if worked2 then
-    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
@@ -352,19 +352,19 @@ local invbanks = getinvitesremote:InvokeServer("Players")
 bankstable = {}
 if bankscount ~= 5 then
     if invbanks[1] ~= nil then
-        table.insert(bankstable, invbanks[1]["BUID"], UserName)
+        table.insert(bankstable, invbanks[1]["BUID"], _G.UserID)
     end
     if invbanks[2] ~= nil then
         table.insert(bankstable, invbanks[2]["BUID"], UserName)
     end
     if invbanks[3] ~= nil then
-        table.insert(bankstable, invbanks[3]["BUID"], UserName)
+        table.insert(bankstable, invbanks[3]["BUID"], _G.UserID)
     end
     if invbanks[4] ~= nil then
-        table.insert(bankstable, invbanks[4]["BUID"], UserName)
+        table.insert(bankstable, invbanks[4]["BUID"], _G.UserID)
     end
     if invbanks[5] ~= nil then
-        table.insert(bankstable, invbanks[5]["BUID"], UserName)
+        table.insert(bankstable, invbanks[5]["BUID"], _G.UserID)
     end
     for i, v in pairs(bankstable) do
         acceptinviteremote:InvokeServer(v)
