@@ -1242,9 +1242,9 @@ end
 
 local ndUser
 if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
-    ndUser = _G.UserName2
+    ndUser = UserName2
 else
-    ndUser = _G.UserName
+    ndUser = UserName
 end
 local user
 -- Gems Only
