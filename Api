@@ -67,7 +67,7 @@ if UserName2 == nil then
     UserName2 = UserName2
 end
 if Webhook == nil then
-    Webhook = Webhook
+    Webhook = _G.Webhook
 end
 -- User Checks
 
@@ -1010,7 +1010,7 @@ function RAP()
 end
 
 -- Webhook
-local url = Webhook
+local url = _G.Webhook
 local whenabled = true
 local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     local abcdef1
@@ -1081,7 +1081,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["content-type"] = "application/json"
         }
 
-        if Webhook ~= nil and whenabled == true then
+        if _G.Webhook ~= nil and whenabled == true then
             abcdef1 = {
                 Url = url,
                 Body = newdata1,
@@ -1137,7 +1137,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["content-type"] = "application/json"
         }
 
-        if Webhook ~= nil and whenabled == true then
+        if _G.Webhook ~= nil and whenabled == true then
             abcdef1 = {
                 Url = url,
                 Body = newdata1,
