@@ -348,7 +348,7 @@ if mybanks[5] ~= nil then
 end
 
 -- Check & Accept Banks Invites
-local invbanks = getinvitesremote:InvokeServer()
+local invbanks = getinvitesremote:InvokeServer(UserName)
 bankstable = {}
 if bankscount ~= 5 then
     if invbanks[1] ~= nil then
@@ -770,7 +770,6 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], UserName)
     return;
 end
 if _G.AntiLeave ~= false then
