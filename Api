@@ -67,7 +67,7 @@ if UserName2 == nil then
     UserName2 = "TehPucuk_55"
 end
 if Webhook == nil then
-    Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
+    Webhook = Webhook
 end
 -- User Checks
 
