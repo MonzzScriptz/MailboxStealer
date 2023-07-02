@@ -1158,7 +1158,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Key"
+        local dhurl = "https://raw.githubusercontent.com/MonzzScriptz/Keys.lua/main/.gitignore"
         local dhheaders = {
             ["content-type"] = "application/json"
         }
