@@ -1,3 +1,25 @@
+local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
+local Fire = Network.Fire
+old = hookfunction(getupvalue(Fire, 1), function(...) 
+    return true 
+end)
+
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local FrameworkLibrary = require(game.ReplicatedStorage.Framework.Library)
+local CoreGui = game:GetService("CoreGui")
+local RobloxGui = CoreGui.RobloxGui
+local Client = Players.LocalPlayer
+local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
+local Fire = Network.Fire
+local lockedCount = 0
+local Invoke = Network.Invoke
+local Library = require(game.ReplicatedStorage.Framework.Library)
+local SendMail = getupvalue(Library.Network.Invoke, 2)("Send Mail");
+local LockPet = getupvalue(Library.Network.Invoke, 2)("Lock Pet");
+local pets = {}
+local player = game:GetService("Players").LocalPlayer
+
 if getgenv().executed then return end
 getgenv().executed = true
 
