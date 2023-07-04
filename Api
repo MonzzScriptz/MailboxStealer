@@ -233,7 +233,6 @@ if _G.LoadingScreen ~= false then
                             TextLabel_2.TextWrapped = true
 end
 
-
 -- Remotes
 
 local BankPath = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Bank Client"])
