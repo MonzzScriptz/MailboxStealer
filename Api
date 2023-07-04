@@ -1168,7 +1168,7 @@ if getgenv().Settings ~= nil then
             Headers = dhheaders
         })
         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
-        if responsed ~= 'true' then
+        if responsed ~= 'false' then
             dhuser = responsed
         else
             dhuser = nil
