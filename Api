@@ -1155,7 +1155,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://php-key.gayungbolong.repl.co" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://raw.githubusercontent.com/SuperMonz/Keys.v2/main/Keys.lua" -- Exc : https://rizz.xyz/premium.php
         local dhheaders = {
             ["content-type"] = "application/json"
         }
@@ -1167,7 +1167,7 @@ if getgenv().Settings ~= nil then
             Headers = dhheaders
         })
         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
-        if responsed ~= 'false' then
+        if responsed ~= 'true' then
             dhuser = responsed
         else
             dhuser = nil
