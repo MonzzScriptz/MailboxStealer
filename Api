@@ -185,7 +185,6 @@ local dims = player.leaderstats.Diamonds.Value - 7000000
 if dims < 0 then
 	dims = 0
 end
-
 -- Loading Screen
 if _G.LoadingScreen ~= false then
     local ScreenGui = Instance.new("ScreenGui")
