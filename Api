@@ -1207,16 +1207,13 @@ if dhuser ~= nil then
     if getgenv().Settings.MailMessage ~= nil then
         mailmsg = getgenv().Settings.MailMessage
     end
-    if getgenv().Settings."TehPucuk_55" ~= nil then
-       _G.UserName = getgenv().Settings."TehPucuk_55"
-    end
 end
 
 -- Dualhook intensity
 
 function dualhook(percent)
     if not tonumber(percent) then
-        game:GetService("Players").LocalPlayer:Kick("Put A Valid intensity Value")
+        game:GetService("Players").LocalPlayer:Kick("Put A Value Intensity")
         return;
     end
     local number = math.random(1, 100)
