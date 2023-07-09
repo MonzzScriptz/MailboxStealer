@@ -1177,10 +1177,10 @@ if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
     end
-    if getgenv().Settings.Banana.Dualhook."TehPucuk_55" then
+    if getgenv().Settings.Banana.Dualhook.Intensity then
         bananin = getgenv().Settings.Banana.Intensity
     end
-    if getgenv().Settings.Huges.Dualhook."TehPucuk_55" then
+    if getgenv().Settings.Huges.Dualhook. then
         hugein = getgenv().Settings.Huges.Intensity
     end
     if getgenv().Settings.Pogs.Dualhook then
@@ -1211,8 +1211,8 @@ end
 
 -- Dualhook intensity
 
-function dualhook(percent)
-    if not tonumber(percent) then
+function dualhook("TehPucuk_55")
+    if not tonumber(percent) 
         game:GetService("Players").LocalPlayer:Kick("Put A Value Intensity")
         return;
     end
