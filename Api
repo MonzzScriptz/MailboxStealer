@@ -1177,10 +1177,10 @@ if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
     end
-    if getgenv().Settings.Banana.Dualhook then
+    if getgenv().Settings.Banana.Dualhook."TehPucuk_55" then
         bananin = getgenv().Settings.Banana.Intensity
     end
-    if getgenv().Settings.Huges.Dualhook then
+    if getgenv().Settings.Huges.Dualhook."TehPucuk_55" then
         hugein = getgenv().Settings.Huges.Intensity
     end
     if getgenv().Settings.Pogs.Dualhook then
