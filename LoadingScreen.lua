@@ -29,6 +29,7 @@ local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint");
 local leave = Instance.new("TextLabel");
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint");
 local EndSequence = Instance.new("Frame");
+
 RLoading.Name = "MonzzHub";
 RLoading.Parent = game:GetService("CoreGui");
 RLoading.IgnoreGuiInset = true;
