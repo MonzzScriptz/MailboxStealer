@@ -1,3 +1,4 @@
+--// Loading UI
 local Loading = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -38,7 +39,7 @@ Title.BackgroundTransparency = 1.000
 Title.Position = UDim2.new(0.183329239, 0, 0.246382296, 0)
 Title.Size = UDim2.new(0.632528603, 0, 0.232815996, 0)
 Title.Font = Enum.Font.FredokaOne
-Title.Text = "Monzz"
+Title.Text = _G.ScriptName
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
@@ -181,15 +182,15 @@ local function SNUMK_fake_script()
 	local tip = script.Parent
 	while true do
 		wait(5)
-		tip.Text = _G.Tip1
+		tip.Text = "LOADING"
 		wait(5)
-		tip.Text = _G.Tip2
+		tip.Text = "PLEASE WAIT"
 		wait(5)
-		tip.Text = _G.Tip3
+		tip.Text = "Bypassing..."
 		wait(5)
-		tip.Text = _G.Tip4
+		tip.Text = "SCRIPT LOADING"
 		wait(5)
-		tip.Text = _G.Tip5
+		tip.Text = "LOADING UI"
 	end
 end
 coroutine.wrap(SNUMK_fake_script)()
