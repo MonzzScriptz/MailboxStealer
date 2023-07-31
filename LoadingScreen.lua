@@ -1,3 +1,4 @@
+--// Loading UI
 local Loading = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -38,7 +39,7 @@ Title.BackgroundTransparency = 1.000
 Title.Position = UDim2.new(0.183329239, 0, 0.246382296, 0)
 Title.Size = UDim2.new(0.632528603, 0, 0.232815996, 0)
 Title.Font = Enum.Font.FredokaOne
-Title.Text = "Monzz Better"
+Title.Text = _G.ScriptName
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
@@ -169,10 +170,10 @@ end
 coroutine.wrap(NDID_fake_script)()
 local function OVSBNB_fake_script()
 	local script = Instance.new('LocalScript', Percentage)
-	wait(0)
+	wait(5)
 	for i = 1,100 do
 		script.Parent.Text = i.."%"
-		wait(0)
+		wait(2)
 	end
 end
 coroutine.wrap(OVSBNB_fake_script)()
@@ -201,4 +202,3 @@ local function LSNGUH_fake_script()
 	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
 end
 coroutine.wrap(LSNGUH_fake_script)()
-end
