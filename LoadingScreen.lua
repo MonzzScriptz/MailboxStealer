@@ -171,7 +171,7 @@ coroutine.wrap(NDID_fake_script)()
 local function OVSBNB_fake_script()
 	local script = Instance.new('LocalScript', Percentage)
 	wait(5)
-	for i = 1,100 do
+	for i = 1 do
 		script.Parent.Text = i.."%"
 		wait(2)
 	end
