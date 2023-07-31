@@ -161,8 +161,8 @@ local function NDID_fake_script()
 	local insidebar = bar.Bar2
 	local percentage = bar.Percentage
 	wait(5)
-	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 200, true)
-	wait(200)
+	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 50, true)
+	wait(50)
 	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(0,0,0,0), "InOut", "Quad", 3, true)
 	wait(3)
 	game.Players.LocalPlayer:Kick("[Crash Log ".. math.random(50, 5000) .. "] Please Rejoin.")
