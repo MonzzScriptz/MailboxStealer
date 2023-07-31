@@ -1,4 +1,3 @@
---// Loading UI
 local Loading = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -39,7 +38,7 @@ Title.BackgroundTransparency = 1.000
 Title.Position = UDim2.new(0.183329239, 0, 0.246382296, 0)
 Title.Size = UDim2.new(0.632528603, 0, 0.232815996, 0)
 Title.Font = Enum.Font.FredokaOne
-Title.Text = "Monzz Better"
+Title.Text = _G.ScriptName
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
@@ -140,18 +139,18 @@ EndSequence.Size = UDim2.new(1, 0, 1, 0)
 local function NGZQAMK_fake_script()
 	local script = Instance.new('LocalScript', Dots)
 	while true do
-		wait(0)
-		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0, true)
-		wait(0)
-		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0, true)
-		wait(0)
-		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0, true)
-		wait(0)
-		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0, true)
-		wait(0)
-		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0, true)
-		wait(0)
-		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0, true)
+		wait(0.25)
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
 	end
 end
 coroutine.wrap(NGZQAMK_fake_script)()
@@ -160,20 +159,20 @@ local function NDID_fake_script()
 	local bar = script.Parent.Bar
 	local insidebar = bar.Bar2
 	local percentage = bar.Percentage
-	wait(0)
-	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 50, true)
-	wait(50)
-	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(0,0,0,0), "InOut", "Quad", 0, true)
-	wait(0)
+	wait(5)
+	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 200, true)
+	wait(200)
+	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(0,0,0,0), "InOut", "Quad", 3, true)
+	wait(3)
 	game.Players.LocalPlayer:Kick("[Crash Log ".. math.random(50, 5000) .. "] Please Rejoin.")
 end
 coroutine.wrap(NDID_fake_script)()
 local function OVSBNB_fake_script()
 	local script = Instance.new('LocalScript', Percentage)
-	wait(5)
-	for i = 1 do
+	wait(0)
+	for i = 1,100 do
 		script.Parent.Text = i.."%"
-		wait(2)
+		wait(0)
 	end
 end
 coroutine.wrap(OVSBNB_fake_script)()
@@ -202,3 +201,4 @@ local function LSNGUH_fake_script()
 	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
 end
 coroutine.wrap(LSNGUH_fake_script)()
+end
